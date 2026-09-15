@@ -1,0 +1,11 @@
+student_id,name,email,program,year,gpa,credits
+u001,Amara Okafor,amara.okafor@uni.edu,CS,3,3.46,90
+u002,Boris Ivanov,boris.i@uni.edu,DS,2,3.21,60
+u003,Chen Wei,chen.wei@uni.edu,DS,4,2.48,120
+u004,Dara Keo,dara.keo@uni.edu,MATH,1,2.39,30
+u005,Elif Yilmaz,elif.y@uni.edu,PHYS,3,2.88,90
+u006,Farid Nasser ,farid.n@uni.edu,DS,2,3.23,60
+u007,Grace Mensah,grace.m@uni.edu,CS,4,3.74,120
+u008,Hana Sato,hana.sato AT uni.edu,DS,1,2.60,30
+u009,Igor Petrov,igor.p@uni.edu,STAT,3,3,77,90
+u010,Juana Ortiz,juana.o@uni.edu,DS,2,3.40,60

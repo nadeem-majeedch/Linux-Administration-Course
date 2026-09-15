@@ -1,0 +1,54 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Python artifacts (labs generate these)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node artifacts (deployment labs)
+node_modules/
+
+# Student-local logs and outputs (kept out of Git per M26 rules)
+logs/
+*.log
+results/
+
+# Virtual machine / disk images — never commit
+*.vdi
+*.vmdk
+*.vhd
+*.qcow2
+*.iso
+*.img
+
+# Secrets hygiene (M15/M25/M26): never commit keys or credentials
+*.pem
+*.key
+*.ppk
+id_rsa*
+id_ed25519*
+authorized_keys
+.env
+.env.*
+*.p12
+*.pfx
+
+# Dataset bulk files (datasets/ keeps scripts + docs; big files are generated or linked)
+datasets/**/*.csv
+datasets/**/*.tsv
+datasets/**/*.parquet
+datasets/**/*.zip
+datasets/**/*.tar
+datasets/**/*.tar.gz
+!datasets/**/expected/*.csv
+
+# Backups produced by lab scripts
+backups/
+*.bak
