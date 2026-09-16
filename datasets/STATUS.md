@@ -6,6 +6,7 @@ and checksums). No bulk data is committed directly.
 
 | Dataset | Status | Producer |
 |---|---|---|
+| `experiment.log` | **delivered** (M08 data; key=value ML training log) | M08 generator |
 | `sales-2019-q1.csv` | **delivered as `transactions.csv`** (M08 data) | [M08 generator](../modules/M08-text-processing/content/data/generate_data.py) |
 | `server.log` | **delivered** (M08 data, 600 lines) | M08 generator |
 | `access.log` | **delivered** (M08 data, 500 lines) | M08 generator |

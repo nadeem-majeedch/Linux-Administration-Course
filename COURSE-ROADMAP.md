@@ -260,6 +260,21 @@ and reshaping a text dataset in the shell feels natural.
 
 ### M08 — Text Processing Toolkit
 
+  **Content status: COMPLETE** — see [content/](modules/M08-text-processing/content/README.md):
+  6 lessons ([viewing/counting](modules/M08-text-processing/content/lessons/01-viewing-counting.md),
+  [find/grep/regex](modules/M08-text-processing/content/lessons/02-finding-files-and-text.md),
+  [columns/sort/uniq](modules/M08-text-processing/content/lessons/03-columns-sort-uniq.md),
+  [sed/awk/xargs](modules/M08-text-processing/content/lessons/04-sed-awk-xargs.md),
+  [DS pipelines](modules/M08-text-processing/content/lessons/05-ds-pipelines.md),
+  [shell↔pandas boundary](modules/M08-text-processing/content/lessons/06-shell-and-pandas.md)),
+  [command reference](modules/M08-text-processing/content/command-reference.md),
+  [3 labs](modules/M08-text-processing/content/labs/README.md) +
+  [mini-project: dq.sh](modules/M08-text-processing/content/labs/mini-project-data-quality-toolkit.md),
+  [6 generated datasets with declared dirt](modules/M08-text-processing/content/data/README.md),
+  [quiz](modules/M08-text-processing/content/practice/quiz.md) +
+  [challenges](modules/M08-text-processing/content/practice/challenges.md),
+  [troubleshooting](modules/M08-text-processing/content/troubleshooting.md).
+
 - **Difficulty:** Intermediate
 - **Prerequisites:** M07
 - **Learning objectives**
@@ -621,6 +636,21 @@ on schedule — the core "keep it running" skills.
 
 ### M17 — Storage, Disks & Filesystems
 
+  **Content status: COMPLETE** — see [content/](modules/M17-storage-and-filesystems/content/README.md):
+  4 lessons ([topology: lsblk/df/du](modules/M17-storage-and-filesystems/content/lessons/01-block-devices-topology.md),
+  [partitions/FS/mounting](modules/M17-storage-and-filesystems/content/lessons/02-partitions-filesystems-mounting.md),
+  [fstab/UUIDs/nofail](modules/M17-storage-and-filesystems/content/lessons/03-fstab-uuids-persistence.md),
+  [swap/LVM/RAID/SSD](modules/M17-storage-and-filesystems/content/lessons/04-swap-lvm-raid-ssd.md))
+  with a module-wide safety contract (safe / sudo+VM / destructive tiers);
+  [Lab 1](modules/M17-storage-and-filesystems/content/labs/lab-01-loopback-disk-lab.md)
+  = full disk lifecycle on a **loopback image** (partition → format →
+  mount → fstab → verify → clean removal; never the real disk),
+  [Lab 2](modules/M17-storage-and-filesystems/content/labs/lab-02-space-audit.md)
+  = df/du audit + executed cleanup plan;
+  [quiz](modules/M17-storage-and-filesystems/content/practice/quiz.md) +
+  [challenges](modules/M17-storage-and-filesystems/content/practice/challenges.md),
+  [troubleshooting](modules/M17-storage-and-filesystems/content/troubleshooting.md).
+
 - **Difficulty:** Intermediate → Advanced
 - **Prerequisites:** M12, M16
 - **Learning objectives**
@@ -738,6 +768,19 @@ remote servers, and keep systems observable and secure. This unit turns students
 junior server administrators — the role they'll play around shared GPU machines.
 
 ### M20 — systemd, Services & Boot
+
+  **Content status: COMPLETE** — see [content/](modules/M20-systemd-services/content/README.md):
+  4 lessons ([units/targets/enable-vs-start](modules/M20-systemd-services/content/lessons/01-systemd-units-concepts.md),
+  [systemctl operations + user services + lingering](modules/M20-systemd-services/content/lessons/02-systemctl-operations.md),
+  [unit files: anatomy, Type=, hardening](modules/M20-systemd-services/content/lessons/03-unit-files.md),
+  [boot process, GRUB/recovery, journal post-mortems + system identity/hardware-discovery routine](modules/M20-systemd-services/content/lessons/04-boot-process-recovery.md));
+  [Lab 1](modules/M20-systemd-services/content/labs/lab-01-service-circuit.md)
+  (operate ssh + author a supervised user service),
+  [Lab 2](modules/M20-systemd-services/content/labs/lab-02-break-and-fix.md)
+  (three break-and-fix incidents: 203/EXEC, restart loop, daemon-reload miss);
+  [quiz](modules/M20-systemd-services/content/practice/quiz.md) +
+  [challenges](modules/M20-systemd-services/content/practice/challenges.md),
+  [troubleshooting](modules/M20-systemd-services/content/troubleshooting.md).
 
 - **Difficulty:** Advanced
 - **Prerequisites:** M18, M19 (M03 revisited)

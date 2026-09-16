@@ -10,7 +10,7 @@ synthetic data (MIT per repo LICENSE).
 | `server.log` | space-separated log | 600 | mixed levels; ~18% WARN/ERROR |
 | `access.log` | Apache combined | 500 | 404/500 responses; varied sizes |
 | `students.csv` | CSV | 10 | u006 trailing-space name; u008 ` AT ` email; u009 comma-decimal GPA |
-| `sensor-telemetry.tsv` | TSV | ~5,350 | 30-second outage for s2; two +40 °C spikes on s3 |
-| `experiment.log` | key=value log | 40 | one FAIL epoch; 2 reruns of epoch 5-6 |
+| `sensor-telemetry.tsv` | TSV | ~5,350 | 31-second outage for s2 (31 missing rows); two +40 °C spikes on s3 (65.5/65.6 readings) |
+| `experiment.log` | key=value log | 40 | one FAIL epoch (epoch=23) |
 
 Use `sha256sum *` after regenerating to confirm integrity against your copy.

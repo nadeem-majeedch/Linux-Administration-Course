@@ -3,9 +3,10 @@
 > Unit 2 · Command Line Fluency
 > Difficulty: Intermediate · Prerequisites: M07
 
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+**Status: content complete.** Start at [content/README.md](content/README.md) —
+6 lessons, 3 labs + graded mini-project (`dq.sh`), command reference,
+quiz + key, 8 challenges, troubleshooting, and 6 generated datasets with
+declared dirt. This file remains the module's contract.
 
 ## What this module covers
 

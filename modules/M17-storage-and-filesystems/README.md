@@ -3,9 +3,9 @@
 > Unit 5 · Software, Storage and Time
 > Difficulty: Intermediate-Advanced · Prerequisites: M12, M16
 
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+**Status: content complete.** Start at [content/README.md](content/README.md) —
+4 lessons, 2 labs (loopback disk lab + space audit), quiz + key, 8 challenges,
+troubleshooting. This file remains the module's contract.
 
 ## What this module covers
 

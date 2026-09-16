@@ -3,9 +3,9 @@
 > Unit 6 · Services, Networking and Security
 > Difficulty: Advanced · Prerequisites: M18, M19
 
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+**Status: content complete.** Start at [content/README.md](content/README.md) —
+4 lessons, 2 labs (service circuit + break-and-fix), quiz + key, 8 challenges,
+troubleshooting. This file remains the module's contract.
 
 ## What this module covers
 

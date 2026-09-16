@@ -112,7 +112,7 @@ def gen_students() -> None:
             email = "hana.sato AT uni.edu"
         if sid == "u009":
             gpa_s = f"{gpa:.2f}".replace(".", ",")
-            rows.append(f"{sid},{name},{email},{prog},{year},{gpa_s},{year * 30}")
+            rows.append('{},{},{},{},{},"{}",{}'.format(sid, name, email, prog, year, gpa_s, year * 30))
             continue
         rows.append(f"{sid},{name},{email},{prog},{year},{gpa:.2f},{year * 30}")
     write(HERE / "students.csv", "\n".join(rows) + "\n")
@@ -127,10 +127,10 @@ def gen_sensor() -> None:
     t = 0
     for i in range(1800):
         t += 1
-        if 700 <= t <= 730:                 # declared gap: sensor s2 offline
-            if random.random() < 0.9:
-                continue
+        s2_offline = 700 <= t <= 730         # declared gap: ONLY s2 drops
         for sid in ("s1", "s2", "s3"):
+            if sid == "s2" and s2_offline and random.random() < 0.95:
+                continue
             drift = random.uniform(-0.15, 0.15)
             temp = round(temps[sid] + i * 0.002 + drift, 1)
             if sid == "s3" and t in (1200, 1201):   # declared spikes
