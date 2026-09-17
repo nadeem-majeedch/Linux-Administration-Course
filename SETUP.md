@@ -192,6 +192,26 @@ Open `lab-log.md` in your home directory and record: date, path chosen (A/B/C/D)
 Ubuntu version, kernel version, and anything that surprised you. **You will keep this
 file for the whole course** — labs and the capstone grade it as evidence of practice.
 
+### Docker (needed from Week 14 — install anytime before then)
+
+M28 (containers) and the capstone's Docker track need Docker Engine. On the
+lab VM (Ubuntu), install from Ubuntu's own repository — sufficient for this
+course:
+
+```bash
+sudo apt install -y docker.io
+sudo usermod -aG docker "$USER"   # run containers without sudo; log out & back in
+docker run hello-world             # verify — see M28 lab 0 for the full walkthrough
+```
+
+- **WSL2 (Path B):** Docker Desktop with the WSL2 backend, or `docker.io`
+  inside the distro — both work; M28 [lab 0](modules/M28-docker-containers/content/labs/lab-00-install.md)
+  covers both and what differs.
+- The `docker` group is root-equivalent on the VM — fine for a disposable
+  lab machine, and a good M25 discussion point.
+- Fall behind? `lab-00-install.md` is the authoritative, tested path;
+  this section is the heads-up, not the replacement.
+
 ---
 
 ## Troubleshooting

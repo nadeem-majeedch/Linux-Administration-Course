@@ -23,7 +23,7 @@
 6. **Practical lab:** none (no VM yet) — guided SETUP.md walkthrough begins in-class
 7. **Student preparation:** read SETUP.md; bring laptop
 8. **Formative:** 3-question exit poll (what's the kernel? what's a distro? what runs on servers?)
-9. **HW:** complete SETUP.md VM creation at home; screenshot login prompt
+9. **HW:** complete SETUP.md VM creation at home; screenshot login prompt; run SETUP.md's post-install toolchain command (one copy-paste) so the S2 8-check passes offline-free
 10. **Required tools:** instructor VM image, projector, SETUP.md
 11. **Time allocation:** 20 intro/contract · 45 lecture · 15 setup walkthrough · 10 formative
 12. **Instructor notes:** [SN unit 1 §1](../speaker-notes/unit-01-foundations-notes.md) — enforce the "questions after setup" norm early
@@ -36,12 +36,12 @@
 3. **Objectives:** identify a distro from evidence; draw the stack; explain why the syscall boundary is a security boundary
 4. **Lecture activities:** distro-identification from terminal evidence; stack-tracing "where does this problem live?"
 5. **Demonstrations:** `apt` vs `dnf` slide contrast; live `ls /proc` — "the kernel's diary"
-6. **Practical lab:** HW follow-up — first login checks (M01 lab, light)
+6. **Practical lab:** 8-check verification (setup guide, 15′) then first-login tour — [M01 lab 1](../../modules/M01-what-is-linux/content/labs/lab-01-identify-your-system.md) (20′, evidence transcript)
 7. **Student preparation:** VM working (HW from S1); M02 quiz attempted
 8. **Formative:** pair-drawing: the boot path from memory
-9. **HW:** M02+M03 quizzes; skim M04 lesson 1
+9. **HW:** M02 lab 1 full circuit at home; M02+M03 quizzes; skim M04 lesson 1
 10. **Required tools:** deck, student VMs
-11. **Time allocation:** 40 M02 · 40 M03 · 10 formative
+11. **Time allocation:** 30 M02 · 35 M03 · 35 verification+lab · 10 formative (buffer is the slack — see dry-run report §4)
 12. **Instructor notes:** SN unit 1 §3–4 — the "macOS is UNIX" question will come; don't dodge it
 13. **Revision resources:** cheatsheet [1 — command line] irrelevant yet; glossary: kernel space, user space, LTS
 
@@ -57,11 +57,16 @@
 4. **Lecture activities:** 15-min VM-sizing mini-lecture; then hands-on
 5. **Demonstrations:** instructor installs alongside, projector on the partitioning screen ("we are NOT touching the real disk")
 6. **Practical lab:** install completes in-session; [M04 lab 1](../../modules/M04-installing-linux-vms/content/labs/README.md)
-7. **Student preparation:** VirtualBox installed (SETUP.md step 1)
+7. **Student preparation:** VirtualBox installed (SETUP.md step 1); ISO
+   downloaded+verified (Path A) or Desktop ISO ready (Path B) — from S1
+   HW
 8. **Formative:** peer-check: three things wrong with this VM config (screenshot)
 9. **HW:** finish any incomplete install; take first snapshot
 10. **Required tools:** VirtualBox, Ubuntu 24.04 LTS ISO, USB spare ISOs
-11. **Time allocation:** 15 lecture · 60 hands-on · 15 formative
+11. **Time allocation:** 15 lecture · 55 hands-on · 15 formative — 5′
+    of the hands-on hour is buffer for slow installers; students whose
+    installs do not finish in-session complete the remaining gates as
+    HW (nothing after Gate 3 in S3 depends on live class time)
 12. **Instructor notes:** SN unit 1 §5 — keep two spare ISOs on USB; the RAM-sizing misconception is in the guide
 13. **Revision resources:** M04 quiz
 
@@ -72,10 +77,10 @@
 3. **Objectives:** take/restore snapshots confidently; describe firmware→bootloader→kernel→init→shell
 4. **Lecture activities:** four-act boot play; typed-command anatomy
 5. **Demonstrations:** break-and-restore: rename a file, restore snapshot; "watch the snapshot eat the mistake"
-6. **Practical lab:** [M04 lab 2](../../modules/M04-installing-linux-vms/content/labs/README.md) snapshot drills
+6. **Practical lab:** [M04 lab 1 Part D](../../modules/M04-installing-linux-vms/content/labs/lab-01-provision-the-vm.md) — the snapshot drills (lab 2 is the WSL2 track)
 7. **Student preparation:** VM snapshotted (S3 HW)
 8. **Formative:** restore race — first pair to recover a "broken" login wins
-9. **HW:** M04 quiz; explore the desktop freely — next week is text-only
+9. **HW:** M04 quiz; on WSL2/desktop paths, run the M04 lab-2 parity circuit — next week is text-only
 10. **Required tools:** VMs
 11. **Time allocation:** 30 lecture · 45 lab · 15 formative
 12. **Instructor notes:** SN unit 1 §5–6 — anxiety peaks here; the snapshot is the safety blanket, sell it
@@ -183,7 +188,7 @@
 6. **Practical lab:** [M10 lab 2](../../modules/M10-bash-scripting/content/labs/README.md) fix-the-bug set
 7. **Student preparation:** M10 lessons 3–5, M11 lesson 1
 8. **Formative:** exit-code quiz
-9. **HW:** Mini-Project A; Assignment 1 (A1) released — due W8
+9. **HW:** Mini-Project A; Assignment 1 (A1) released — due end of week 6
 10. **Required tools:** VMs
 11. **Time allocation:** 40 lecture+demo · 35 lab · 15 formative
 12. **Instructor notes:** SN unit 3 §2–3 — shellcheck as a teaching tool, not a gate
@@ -275,7 +280,7 @@
 6. **Practical lab:** [M16 labs](../../modules/M16-package-management/content/labs/README.md) (search/install/remove only — nothing system-critical)
 7. **Student preparation:** M16 lesson 1–2
 8. **Formative:** "which package command when?" round
-9. **HW:** M16 quiz; Assignment 1 (A1) due this week
+9. **HW:** M16 quiz; (A1 was due end of week 6 — see the [assessment schedule](assessment-schedule.md))
 10. **Required tools:** VMs (snapshotted before package labs)
 11. **Time allocation:** 40 M16 · 30 M17 · 20 formative
 12. **Instructor notes:** SN unit 5 §1–2 — PPA risk story; snapshot before labs, always
@@ -455,7 +460,8 @@
 6. **Practical lab:** [M26 lab 1](../../modules/M26-git-dev-workflows/content/labs/README.md)
 7. **Student preparation:** M26 lessons 1–2
 8. **Formative:** "what did this command change?" round
-9. **HW:** M26 quiz; put W5 script under git
+9. **HW:** M26 quiz; put W5 script under git · *Capstone milestone: Proposal
+   (phase 1) due this week — environment choice + team roles*
 10. **Required tools:** VMs, git
 11. **Time allocation:** 45 lecture · 30 lab · 15 formative
 12. **Instructor notes:** SN unit 7 §1 — branch≠copy misconception; datasets never committed
@@ -468,7 +474,7 @@
 3. **Objectives:** build a pinned venv; run Jupyter on the VM and reach it correctly; explain why `python3 -m pip`
 4. **Lecture activities:** environment-failure diagnosis (ModuleNotFoundError autopsy); venv lifecycle
 5. **Demonstrations:** venv → Jupyter → kernel → data dir loop, live
-6. **Practical lab:** [M27 end-to-end lab](../../modules/M27-python-jupyter-data/content/labs/README.md)
+6. **Practical lab:** [M26 lab 3 — end-to-end DS workflow](../../modules/M26-git-dev-workflows/content/labs/lab-03-end-to-end-ds-workflow.md) — synthesizes M26+M27; [M27 env drills](../../modules/M27-python-jupyter-data/content/labs/README.md) run alongside
 7. **Student preparation:** M27 lessons 1–2
 8. **Formative:** which-environment round
 9. **HW:** M27 quiz; **Assignment 2 (A2) due**
@@ -491,7 +497,8 @@
 6. **Practical lab:** [M28 labs](../../modules/M28-docker-containers/content/labs/README.md)
 7. **Student preparation:** M28 lessons 1–2; Docker installed per SETUP
 8. **Formative:** image-vs-container round
-9. **HW:** M28 quiz
+9. **HW:** M28 quiz · *Capstone milestone: Build (phase 2) checkpoint —
+   core services + users live (rubric areas 1–4 evidence)*
 10. **Required tools:** VMs with Docker
 11. **Time allocation:** 45 lecture · 30 lab · 15 formative
 12. **Instructor notes:** SN unit 7 §3 — `docker system prune` caution; volume-permission gotcha
@@ -527,7 +534,9 @@
 6. **Practical lab:** [M31 DS Server lab](../../modules/M31-data-science-server/content/labs/ds-server-lab.md) (CPU-only phases)
 7. **Student preparation:** M31 lessons 1–2
 8. **Formative:** method-step ordering round
-9. **HW:** **Assignment 3 (A3) due**; capstone final polish
+9. **HW:** **Assignment 3 (A3) due**; capstone final polish · *Capstone
+   milestone: Operate (phase 3) checkpoint — the drill-book incident is
+   graded live in S29 (rubric areas 5–7, 9)*
 10. **Required tools:** VMs, drill-book staging
 11. **Time allocation:** 35 M31 · 40 M32 clinic · 15 formative
 12. **Instructor notes:** SN unit 8 §2 — the drill is the dress rehearsal for the practical exam
@@ -543,7 +552,8 @@
 6. **Practical lab:** revision circuits
 7. **Student preparation:** [final-revision-checklist](../revision/final-revision-checklist.md) completed
 8. **Formative:** mock practical-exam task (ungraded)
-9. **HW:** rest
+9. **HW:** rest · *Capstone milestone: Document (phase 4) + Demo/viva
+   (phase 5) — runbook peer-test and defense scheduled with the exam week*
 10. **Required tools:** VMs
 11. **Time allocation:** full session, student-driven
 12. **Instructor notes:** SN unit 8 §3 — triage table ready for common panic topics

@@ -13,6 +13,15 @@
 | [troubleshooting-scenarios.md](troubleshooting-scenarios.md) | 12 practice incidents — symptom first, hint second, approach third |
 | [frequently-made-mistakes.md](frequently-made-mistakes.md) | The ten mistakes this course sees every term, with the fix habit |
 | [final-revision-checklist.md](final-revision-checklist.md) | The last-week plan: what to re-do (not re-read) |
+| [week-01-dry-run-report.md](week-01-dry-run-report.md) | Instructor dry-run of Week 1: timing, coverage, corrections applied |
+| [week-02-dry-run-report.md](week-02-dry-run-report.md) | Instructor dry-run of Week 2 (M04 install/snapshots): flavor-track fix, lab-pointer fix, timing buffer |
+| [course-wide-review-inventory.md](course-wide-review-inventory.md) | Findings register for the Weeks 2–16 review: weeks↔files map, gaps, correction plan |
+| [FINAL-COURSE-WIDE-TEACHING-REVIEW.md](FINAL-COURSE-WIDE-TEACHING-REVIEW.md) | The course-wide pass consolidated: status, all corrections, validation results, instructor decisions |
+| [session-deck-splitting-recommendation.md](session-deck-splitting-recommendation.md) | Evidence-based review of unit-level vs per-session decks (keep unit decks; seams recorded) |
+| [printable-lab-workbook-recommendation.md](printable-lab-workbook-recommendation.md) | Print usability review: per-week printed sheets, not a merged volume |
+| [clo-evidence-packet-plan.md](clo-evidence-packet-plan.md) | How to build the CLO evidence packet at term end (templates; no pre-filled attainment) |
+| [timing-observation-sheet.md](timing-observation-sheet.md) | Per-session actual-vs-planned timing log — turn estimates into evidence |
+| [week-03-dry-run-report.md](week-03-dry-run-report.md) … [week-16-dry-run-report.md](week-16-dry-run-report.md) | Course-wide pass: per-week dry-run reports for Weeks 3–16 (each with the 14-section Week-1/2 structure) |
 
 ## How to revise this course (the honest method)
 

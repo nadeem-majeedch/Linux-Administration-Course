@@ -11,6 +11,7 @@
 | [student-environment-setup.md](student-environment-setup.md) | Per-term: what to verify in Week 1's setup session; the standard lab image |
 | [lab-infrastructure.md](lab-infrastructure.md) | Room setup, snapshot strategy, shared-dataset staging, exam station prep |
 | [delivery-checklist.md](delivery-checklist.md) | The week-by-week operational checklist: before/during/after each session |
+| [fresh-environment-verification-checklist.md](fresh-environment-verification-checklist.md) | One consolidated pre-term pass: every environment check the course assumes, with pass/fail fields (not executed by its authors — it is the instrument for *your* fresh-VM day) |
 
 ## The one rule that shapes all four guides
 

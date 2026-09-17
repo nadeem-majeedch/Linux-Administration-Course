@@ -10,7 +10,7 @@
 | 2 | M01–M04 quizzes open | (quiz 10% pool) | online/terminal | low stakes; establishes the attempt-culture |
 | 3 | M05–M06 quizzes | quiz pool | in-quiz | first closed-book attempt |
 | 4 | **LA-1** Navigation & Files Circuit | (lab 10% pool) | 20-min graded lab | per-pair VM snapshot; rubric in file |
-| 4–7 | **Assignment 1 — Organized Analyst** (A1) | 5% | take-home | released W5 session 10; due end W6; evidence transcript required |
+| 5–6 | **Assignment 1 — Organized Analyst** (A1) | 5% | take-home | released W5 session 10; due end W6; evidence transcript required |
 | 5–8 | M08 mini-project + M07/M08/M09 quizzes | quiz pool + project | mixed | mini-project feeds A1's dataset section |
 | 8 | **LA-2** Pipeline Fluency | lab pool | 20-min graded lab | sample-log distribution check |
 | 9–11 | M10/M11 + M12–M15 quizzes | quiz pool | | |
@@ -18,7 +18,7 @@
 | 12 | **LA-3** Permissions Repair | lab pool | staged VM | instructor pre-stages per pair; snapshot between |
 | 12–13 | **LA-4** Service & Log Forensics | lab pool | staged VM | crash-looping unit + bloated journal |
 | 13 | **LA-5** Remote Workstation | lab pool | own VM | client-side config spot-check |
-| 14–15 | **Assignment 3 — Remote Operator** (A3) | 5% | take-home | released W12; due W15 (M20–M28) |
+| 11–15 | **Assignment 3 — Remote Operator** (A3) | 5% | take-home | released W11 (S22); due W15 (M20–M28) |
 | 15 | Capstone **Operate** phase checkpoint | rubric phase 3 | project | drill-book incident graded live in S29 |
 | **7** | **Midterm** | **20%** | 2 h + live terminal | [paper](../../assessments/exams/midterm.md) · [key](../../assessments/exams/midterm-key.md) (instructor) |
 | **16** | **Practical exam** | **15%** | 90 min staged server | [paper](../../assessments/practical/practical-exam.md) · [staging script](../../assessments/practical/practical-key.md) |

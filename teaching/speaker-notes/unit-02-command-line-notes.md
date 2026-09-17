@@ -78,7 +78,7 @@ reflex that precedes every `rm` with a wildcard."
 
 ---
 
-## Session 7 (Slides 9: text core) and Session 8 (Slides 10–13)
+## Session 7 (Slides 9: text core) and Session 8 (Slides 10–16)
 
 **Teaching purpose.** The DS centerpiece: datasets as text streams.
 Session 7 builds vocabulary tools; Session 8 composes them into the

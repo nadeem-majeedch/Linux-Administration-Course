@@ -42,7 +42,7 @@
 ## Instructor staging
 
 - Drill scripts are in the module — verify they run on *this* semester's
-  lab image the beforenoon of S29
+  lab image the afternoon before S29
 - [Infrastructure checklist](../../setup-and-delivery/lab-infrastructure.md)
   item 10
 

@@ -72,6 +72,12 @@ The course installs **Ubuntu Server LTS** (no GUI):
 - If you want a desktop later, it's one package group away — a good
   exercise in itself (M16).
 
+> **Path-B note (WSL2 / desktop hosts):** if you created your machine
+> with SETUP.md's Path B, or already installed the **Desktop** flavor
+> on Path A, nothing here breaks — note the difference in
+> `lab-environment.md` and use the Desktop-ISO variant of the steps in
+> [Lab 1 Part A](../labs/lab-01-provision-the-vm.md). WSL2 students
+
 Pick the **latest LTS** (24.04 at time of writing), not interim
 releases — M02 explained the support-window reasoning.
 

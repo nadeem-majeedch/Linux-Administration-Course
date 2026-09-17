@@ -35,7 +35,10 @@
 
 ## Instructor staging
 
-Course datasets must be present (repo `datasets/` copy or lab share) —
+Course datasets must be present (delivered via the [M08 data
+generator](../../../modules/M08-text-processing/content/data/generate_data.py)
+or a lab share — see [datasets/STATUS.md](../../../datasets/STATUS.md);
+the top-level `datasets/` directory holds docs, not the files themselves) —
 [infrastructure checklist](../../setup-and-delivery/lab-infrastructure.md)
 item 4. Nothing else.
 

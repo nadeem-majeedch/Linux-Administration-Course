@@ -243,7 +243,7 @@ preview it.
 # Slide 12 — Knowledge check
 
 ## Slide Content
-1. `journalctl -u web -p err --since -1h` — what exactly appears?
+1. `journalctl -u web -p err --since "-1h"` — what exactly appears? (note the quotes — unquoted, your shell eats the minus)
 2. UFW default-deny is on. SSH still works. Which rule keeps you in?
 3. You see si/so constantly nonzero in vmstat. Diagnosis?
 

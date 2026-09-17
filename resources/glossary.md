@@ -103,6 +103,11 @@ download or transfer is intact. *M02, M23, M24.*
 **Idempotent** — Safe to run again with the same result; the property that makes
 scripts schedulable. *M11, M19.*
 
+**initramfs** — The small initial ram filesystem the bootloader loads alongside
+the kernel; it contains just enough drivers to find and mount the real root
+filesystem, then hands over to the boot's final act (systemd). When a boot fails
+before login, this is the act to suspect. *M03, M04.*
+
 **IP address** — A machine's network address (IPv4 like `192.168.1.20`); private
 ranges (`10.x`, `172.16–31.x`, `192.168.x`) are not routable from the internet. *M21.*
 

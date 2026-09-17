@@ -124,8 +124,9 @@ and SETUP.md. Two spare ISOs on USB, always.
 
 - **Pacing:** S3 is the course's first hands-on hour; protect it. All
   lecture trimming happens in S2.
-- **The snapshot flag:** every student must have `clean-baseline` before
-  leaving S4 — check it off; week 3's labs depend on it.
+- **The snapshot flag:** every student must have their
+  `clean-install-<date>` snapshot (M04 lab 1) before leaving S4 —
+  check it off; week 3's labs depend on it.
 - **Reading assignment rhythm starts now:** each session's prep line in
   the [plan](../../teaching-plan/16-week-course-plan.md) names the exact
   lesson; hold students to it gently (quiz attempts are the enforcement).

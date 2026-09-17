@@ -7,7 +7,7 @@
 |---|---|---|---|---|---|
 | Version your work | M26 | 45' | ★★ | real history built by hand + clean graph | [M26 lab 1](../../../modules/M26-git-dev-workflows/content/labs/lab-01-version-your-work.md) |
 | Break & repair clinic | M26 | 30' | ★★★ | recovery verbs with when-to-use notes | [M26 lab 2](../../../modules/M26-git-dev-workflows/content/labs/lab-02-break-repair-clinic.md) |
-| End-to-end DS workflow | M27 | 50' | ★★★ | clone→venv→pin→data→Jupyter→commit loop | [M27 lab 3](../../../modules/M27-python-jupyter-data/content/labs/lab-03-batch-scheduling.md) |
+| End-to-end DS workflow | M26+M27 | 50' | ★★★ | clone→venv→pin→data→Jupyter→commit loop | [M26 lab 3](../../../modules/M26-git-dev-workflows/content/labs/lab-03-end-to-end-ds-workflow.md) |
 | Environment drills | M27 | 20' | ★★ | venv lifecycle + failure diagnosis | [M27 labs](../../../modules/M27-python-jupyter-data/content/labs/README.md) |
 | First containers | M28 | 30' | ★★ | run/exec/logs with port+volume mapping | [M28 labs](../../../modules/M28-docker-containers/content/labs/README.md) |
 | Build & compose | M28 | 30' | ★★★ | Dockerfile + volume persistence proof | [M28 labs](../../../modules/M28-docker-containers/content/labs/README.md) |
@@ -17,7 +17,8 @@
 ## Session mapping
 
 - **S25**: version-your-work (+ break-repair as HW)
-- **S26**: end-to-end DS workflow — the unit's centerpiece
+- **S26**: end-to-end DS workflow (M26 lab 3, synthesizing M26+M27) — the
+  unit's centerpiece; M27 env drills run alongside
 - **S27**: first containers (+ build/compose as HW)
 - **S28**: nginx + PostgreSQL labs
 

@@ -47,6 +47,11 @@ answers and the *reason*:
 | SSH server | ✅ **install OpenSSH server** | M22 begins here; retro-fitting is easy but why not now |
 | Featured snaps | none | course uses apt; M16 covers snap separately |
 
+> **On the Desktop flavor?** (SETUP.md Path B, or you chose the Desktop
+> ISO on Path A.) The same questions appear in the GUI installer, just
+> drawn differently — the answers and the reasons are identical. Where
+> a step below is Server-specific, the lab says so inline.
+
 **Username habit:** pick something you'd be willing to type in an
 SSH command thousands of times. Short, lowercase, no spaces.
 

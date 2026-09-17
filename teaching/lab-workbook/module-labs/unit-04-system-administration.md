@@ -43,7 +43,7 @@
 ## Instructor staging
 
 Multi-user accounts and broken states are **pre-staged per pair** — run
-the staging the beforenoon and snapshot; restore between pairs. The
+the staging the afternoon before and snapshot; restore between pairs. The
 [infrastructure checklist](../../setup-and-delivery/lab-infrastructure.md)
 covers it; the staging pattern mirrors LA-3's.
 

@@ -18,6 +18,11 @@ under pressure.
 1. From the official Ubuntu release server, fetch: the latest **LTS
    Server** ISO for your architecture, plus `SHA256SUMS` and
    `SHA256SUMS.gpg` from the same directory.
+   > **Desktop-ISO students (SETUP.md Path B):** everything in this lab
+   > works with the Desktop ISO too — the same `SHA256SUMS`/
+   > `SHA256SUMS.gpg` files sit beside the Desktop download on
+   > releases.ubuntu.com, and the installer differs only in looks.
+   > The verify step itself is identical.
 2. Verify integrity, then authenticity (M02 Lab 2 procedure):
 
 ```console
@@ -65,7 +70,8 @@ investigate anything else now.
 2. Boot, then make the mess:
 
 ```console
-$ touch ~/mess.txt && sudo apt-get install -y sl
+$ sudo apt-get update && sudo apt-get install -y sl
+$ touch ~/mess.txt
 $ ls ~/mess.txt && command -v sl        # both exist
 ```
 

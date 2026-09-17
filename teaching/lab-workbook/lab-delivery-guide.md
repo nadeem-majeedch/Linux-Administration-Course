@@ -68,7 +68,7 @@ This rule is published in week 1; surprises are a teaching failure.
 - Pre-staged labs (multi-user M12/M14, bloated journals M24, staged
   faults LA-3/LA-4/practical) follow the
   [infrastructure checklist](../setup-and-delivery/lab-infrastructure.md) —
-  run it the *beforenoon*, not the morning of
+  run it the *afternoon before*, not the morning of
 - Restore-permission is always yes; a student who restores is executing
   the course's most important reflex
 

@@ -72,6 +72,12 @@ paragraph: **which three course labs would you substitute, and with
 what?** (You may consult the labs' "WSL2" notes, but the reasoning
 must be yours.)
 
+Finally, add one §4 row of your own: **what stands in for the VM
+snapshot on your track, and what can it actually restore?** (Honest
+answers include "nothing full-machine — I can only reconstruct files";
+WSL2 has no checkpoint equivalent, so your real reset button is
+documented commands, e.g. re-running this lab.)
+
 ## Troubleshooting
 
 - `systemctl` says "System has not been booted with systemd" — §2

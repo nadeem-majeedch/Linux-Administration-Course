@@ -330,7 +330,7 @@ Rebuild the Unit-2 concept map from memory, class-wide.
 **Exit ticket:** write a one-line pipeline that counts lines in `data.csv`
 containing `ERROR`, then HW:
 - M07–M09 quizzes · M08 mini-project started
-- LA-1 next week — practice the [navigation circuits](../../labs/README.md)
+- LA-1 lands at this unit's end — every lab above is its rehearsal
 
 ## Instructor Delivery Notes
 Collect pipelines; the best two open Session 9 (scripting) as

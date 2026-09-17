@@ -6,13 +6,19 @@
 > companion: what to verify in the Week-1 setup session, and how to
 > triage the four failures you will actually see.
 
-## Week-1 setup session (first 30 minutes of Lab 1)
+## Week-1 setup verification (8-check)
+
+> **When it runs:** Session 2's opening 15 minutes for students whose
+> S1 homework VM succeeded; **mandatory gate at the start of Session 3**
+> for everyone (by then every VM exists). Run it *after* the SETUP.md
+> post-install toolchain step — the network and text-tool checks below
+> assume `curl`/`grep`/`sed` were installed or verified there.
 
 Project the success criteria; students verify their own install:
 
 | Check | Command | Passing looks like |
 |---|---|---|
-| 64-bit Ubuntu LTS | `lsb_release -a` | the course's stated version |
+| 64-bit Ubuntu LTS | `cat /etc/os-release` | the course's stated version (`ID=ubuntu`, `VERSION="24.04 …"`) |
 | Kernel visible | `uname -r` | non-empty; print it (M03 hook) |
 | User is themselves | `whoami` | their username, **not** `root` |
 | sudo works | `sudo -v` | password prompt, then silence |
@@ -62,7 +68,7 @@ before anything else happens in Lab 1.
 By end of Week 1 every student can, from their own sandbox:
 
 ```console
-$ whoami && pwd && lsb_release -d && python3 --version
+$ whoami && pwd && grep PRETTY /etc/os-release && python3 --version
 ```
 
 …and state aloud which path they're on (A/B/C/D). That sentence is the

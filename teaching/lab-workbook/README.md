@@ -11,6 +11,11 @@
 2. **[lab-delivery-guide.md](lab-delivery-guide.md)** — how lab sessions run: checkpoints, transcripts, teardown census, getting unstuck
 3. **Your unit's lab index** — below — lists every lab in order with duration and difficulty
 
+> **Printing (if your room uses paper):** print the unit index plus that
+> week's linked lab files — never the whole workbook. Evidence stays
+digital (transcripts + end-states are the deliverable). Rationale:
+[../revision/printable-lab-workbook-recommendation.md](../revision/printable-lab-workbook-recommendation.md)
+
 ## Lab indexes by unit
 
 | Unit | Labs | Sessions | Key skills |

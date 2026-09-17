@@ -30,7 +30,7 @@ Framing: "Units 1–3 made you capable. This unit makes you
 - Every process runs **as a user**; every file is **owned** by a user+group
 - `id` → uid, gid, supplementary groups · `whoami` · `groups`
 - Humans live in `/home`; **root (uid 0)** is the administrator — the exception to every rule
-- System users (uid < 1000) run services, not people
+- System users (uid < 1000 on Debian/Ubuntu — a packaging convention, not kernel law) run services, not people
 
 ## Instructor Delivery Notes
 Run `id` live; decode every field. The root-is-not-a-user point matters:

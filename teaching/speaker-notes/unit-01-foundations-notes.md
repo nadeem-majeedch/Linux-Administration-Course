@@ -47,10 +47,12 @@ string out loud, piece by piece, no hand-waving.
 **Possible command errors during demo.** None by design; if you mistype,
 *use it* — narrate the recovery. Modeling recovery is the hidden lesson.
 
-**Classroom activity.** Card sort (Slide 1 section): print 8
-technology names (Android, Ubuntu, macOS, VirtualBox, bash, apt,
-Jupyter, ext4); teams place them on the stack. Debrief targets Android
-(defensible *both* ways — make someone argue each).
+**Classroom activity.** Card sort (paper, not on a slide — prepare 8
+cards: Android, Ubuntu, macOS, VirtualBox, bash, apt, Jupyter, ext4);
+teams place them on the stack drawing they make in Slide 6's task.
+Debrief targets Android (defensible *both* ways — make someone argue
+each). If printing wasn't possible, run it as a shout-out sort against
+the Slide 4 diagram.
 
 **Time allocation.** 20/45/15/10 as deck states. If running long, cut
 the card sort, never Slide 4.
@@ -58,8 +60,9 @@ the card sort, never Slide 4.
 **Transition.** "Next session you boot your own machine into the same
 stack you just drew."
 
-**Exit questions.** Collect tickets; the "fuzzy" column feeds Session 5's
-warm-up.
+**Exit questions (S1 formative, per plan).** Three-question exit poll:
+what's the kernel? what's a distro? what runs on servers? Collect
+tickets; the "fuzzy" answers feed Session 5's warm-up.
 
 ---
 
@@ -108,12 +111,15 @@ disk'?" Get the wrong answer ("my laptop's disk!") into the air, then
 dismantle it with the virtualization slide.
 
 **Demo choreography (S4 snapshot demo).**
-1. Snapshot named `clean-baseline` (do it live, slowly).
-2. Introduce harmless chaos: `sudo hostname lab-broken` then relogin.
-3. Restore snapshot; `hostname` back to original. Narrate: "the mistake
-   never happened."
+1. Snapshot named `clean-install-<date>` (do it live, slowly — the
+   exact name students took in M04 lab 1).
+2. Introduce harmless chaos *inside the VM*: `sudo hostnamectl
+   set-hostname lab-broken` then relogin.
+3. Restore snapshot; `hostnamectl` back to original. Narrate: "the
+   mistake never happened."
 4. Ask: "What does this make possible in this course?" (expected:
-   "we can try dangerous things" — confirm and constrain: *in the VM*).
+   "we can try dangerous things" — confirm and constrain: *in the VM
+   only; the host never sees any of this*).
 
 **Possible errors & fixes.**
 
