@@ -1,10 +1,10 @@
-# M23-Clinic — Linux Performance & Troubleshooting
+# M32-Clinic — Linux Performance & Troubleshooting
 
-> Unit 6 capstone companion · Difficulty: Advanced
+> Companion module (pairs with Unit 6) · Difficulty: Advanced
 > Prerequisites: M18, M20, M21, M24 (the Performance Clinic extension is assumed knowledge)
-> Note: the *numbered* M23 in the roadmap is File Transfer; this directory is
-> the clinic companion to it (see [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md),
-> Unit 6 notes).
+> Note: numbered M31 (Data Science Server) and M32 (this clinic) are the
+course's two companion modules beyond the core M01–M30 sequence (see
+[COURSE-ROADMAP.md](../../COURSE-ROADMAP.md), Unit 6 notes).
 
 ## What this module covers
 

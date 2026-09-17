@@ -113,7 +113,7 @@ objects:
   moved outward. The twin rule carries: ufw *and* the security group
   both allow, or nothing flows — and when "it just stopped working"
   after a redeploy, *this* is the layer people forgot (the
-  M23-clinic connectivity card, one rung earlier than usual).
+  M32-clinic connectivity card, one rung earlier than usual).
   Course posture, cloud edition: 22 from known ranges only, app ports
   via tunnel/bastion — never 0.0.0.0/0 "temporarily".
 - **SSH at fleet scale** — the M22 patterns professionalized: key
@@ -132,7 +132,7 @@ M24 sar concept, host-implemented). Two honest notes for a DS admin:
   journal skills) still owns the application truth — the two layers
   complement: provider says CPU pinned at 100%, your `pidstat` says
   which process and since when.
-- The M23-clinic lesson holds verbatim: provider graphs are evidence
+- The M32-clinic lesson holds verbatim: provider graphs are evidence
   for the resource conversation; your instruments remain the verdict.
 
 ---

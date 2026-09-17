@@ -95,7 +95,7 @@ $ act workflow_dispatch -P ubuntu-latest=catthehacker/ubuntu:act-latest
 Read the output as the course's history replayed by a robot: checkout
 (the repo *is* the subject), pinned Python + `requirements.txt` (M27),
 shellcheck (M10's bar enforced), pytest (the tests you wrote *as*
-tests), smoke (M23-clinic's verify, mini).
+tests), smoke (M32-clinic's verify, mini).
 
 **The drift-proof demonstration** — the lab's core lesson:
 

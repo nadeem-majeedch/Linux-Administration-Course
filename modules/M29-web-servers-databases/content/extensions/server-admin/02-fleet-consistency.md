@@ -71,7 +71,7 @@ it's new *scale*. The same principles, restated:
   sudo scopes *in policy*, key distribution *in policy*.
 - **Reproducibility** (M27/M28) becomes: one manifest, N identical
   outputs — the requirements.txt instinct applied to whole servers.
-- **Evidence-first** (M24/M23-clinic) becomes: convergence output,
+- **Evidence-first** (M24/M32-clinic) becomes: convergence output,
   provisioning logs, health histories — the incident method's paper
   trail, continuous.
 - **The untested-restore rule** (M24 §5) becomes: policy that isn't

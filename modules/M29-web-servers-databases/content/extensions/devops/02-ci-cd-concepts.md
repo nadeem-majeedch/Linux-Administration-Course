@@ -26,7 +26,7 @@ What the robot actually buys you, in course vocabulary:
 | Runs tests on every commit | M10/M11's shellcheck + self-testing scripts |
 | Builds from pinned contracts | M27 freeze / M28 Dockerfile |
 | Fails loudly, logs everything | M24's evidence contract |
-| Verifies before reporting success | M23-clinic's verify-the-original-symptom |
+| Verifies before reporting success | M32-clinic's verify-the-original-symptom |
 | Refuses to deploy unverified change | the blast-radius sentence, made mechanical |
 
 The mental model to keep: **the pipeline is your runbook's
@@ -109,7 +109,7 @@ jobs:
       - name: Run tests                    # the checklist
         run: pytest tests/ -v
 
-      - name: Smoke-import the analysis    # M23-clinic verify, mini
+      - name: Smoke-import the analysis    # M32-clinic verify, mini
         run: python -c "import analysis; print('import ok')"
 
   build:

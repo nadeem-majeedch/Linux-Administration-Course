@@ -78,6 +78,6 @@ engineering; say it out loud in the runbook.
   `600`.
 - Commit small and often; the history is graded.
 - Stuck 30+ minutes: capture evidence, form a hypothesis, bring *that* to
-  office hours — the M23-clinic discipline, in office-hours form.
+  office hours — the M32-clinic discipline, in office-hours form.
 - The runbook is written *as you go* (every operation you perform, you
   document) — not reconstructed in week 5. Future-you is its first reader.

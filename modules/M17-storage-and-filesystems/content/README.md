@@ -1,5 +1,20 @@
 # Module 17 — Storage, Disks & Filesystems · Content Index
 
+## Objectives & navigation
+
+The module's formal **learning objectives, concepts, command-line skills,
+laboratory, exercises, and Data Science connection** are specified in the
+roadmap: [COURSE-ROADMAP.md — Unit 5 · Software, Storage & Time](../../../COURSE-ROADMAP.md#unit-5--software-storage--time-m16m19).
+This page indexes the material; the lessons deliver it.
+
+| Layer | Where |
+|---|---|
+| Objectives & module contract | [Roadmap](../../../COURSE-ROADMAP.md#unit-5--software-storage--time-m16m19) + [module README](../README.md) |
+| Lessons | below, in order — do the end-of-lesson self-checks |
+| Labs | [labs/README.md](labs/README.md) |
+| Practice | [practice/](practice/) — quiz (+ instructor key), challenges |
+| Troubleshooting | [troubleshooting.md](troubleshooting.md) |
+
 > **Status:** Content complete — 4 lessons, 2 labs (loopback disk lab +
 > space audit), quiz + key, 8 challenges, troubleshooting guide.
 > Module contract: [../README.md](../README.md) · Difficulty: Intermediate → Advanced.

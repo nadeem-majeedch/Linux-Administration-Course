@@ -22,12 +22,12 @@ Linux's role is not a footnote — it is the substrate. Every stage of
 that loop is Linux work you already own: commits are Git (M26), tests
 and builds run in shells (M10/M11) inside containers (M28), deployment
 is systemd units and config discipline (M20/M29), operation is logs
-and monitoring (M24) and the incident method (M23-clinic). The pipeline
+and monitoring (M24) and the incident method (M32-clinic). The pipeline
 itself is a Linux process (a runner) executing your checklist with
 robotic patience.
 
 **The cultural core, stated as the course has taught it:** automate
-the repeatable (M11), make evidence the deliverable (M24/M23-clinic),
+the repeatable (M11), make evidence the deliverable (M24/M32-clinic),
 and treat every artifact — code, environment, config, infrastructure —
 as versioned text.
 
@@ -89,7 +89,7 @@ architectural requirement:
 The right half of the loop — operate, feed back — is where DS work
 lives: logs tell you the job ran (M24's three-element evidence),
 monitoring tells you it *should* run differently, and the incident
-method (M23-clinic) converts failures into prevention. Two DevOps
+method (M32-clinic) converts failures into prevention. Two DevOps
 habits institutionalize that feedback:
 
 - **Every deploy is observable** — health endpoints (M29), structured

@@ -1,5 +1,20 @@
 # M31 — The Data Science Server · Content Index
 
+## Objectives & navigation
+
+The module's formal **learning objectives, concepts, command-line skills,
+laboratory, exercises, and Data Science connection** are specified in the
+roadmap: [COURSE-ROADMAP.md — Unit 8 · Capstone (companion)](../../../COURSE-ROADMAP.md#unit-8--capstone-m30).
+This page indexes the material; the lessons deliver it.
+
+| Layer | Where |
+|---|---|
+| Objectives & module contract | [Roadmap](../../../COURSE-ROADMAP.md#unit-8--capstone-m30) + [module README](../README.md) |
+| Lessons | below, in order — do the end-of-lesson self-checks |
+| Labs | [labs/ds-server-lab.md](labs/ds-server-lab.md) |
+| Practice | [practice.md](practice.md) — quiz + key, challenges |
+| The lab | [labs/ds-server-lab.md](labs/ds-server-lab.md) |
+
 > Unit 8 companion · Difficulty: Advanced · Time: ~8 hours total
 > Environment: your own VM, CPU-only (GPU concepts taught administratively)
 > Prerequisites: M20, M22, M24-clinics, M26, M27, M28, M29 core + extensions

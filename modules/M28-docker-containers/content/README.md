@@ -1,5 +1,20 @@
 # Module 28 — Docker and Containers
 
+## Objectives & navigation
+
+The module's formal **learning objectives, concepts, command-line skills,
+laboratory, exercises, and Data Science connection** are specified in the
+roadmap: [COURSE-ROADMAP.md — Unit 7 · The Data Science Stack](../../../COURSE-ROADMAP.md#unit-7--the-data-science-stack-m26m29).
+This page indexes the material; the lessons deliver it.
+
+| Layer | Where |
+|---|---|
+| Objectives & module contract | [Roadmap](../../../COURSE-ROADMAP.md#unit-7--the-data-science-stack-m26m29) + [module README](../README.md) |
+| Lessons | below, in order — do the end-of-lesson self-checks |
+| Labs | [labs/README.md](labs/README.md) |
+| Practice | [practice/](practice/) — quiz (+ instructor key), challenges |
+| Troubleshooting | [troubleshooting.md](troubleshooting.md) |
+
 > Unit 7 · The Data Science Stack · Difficulty: Intermediate → Advanced
 > Time: ~8 hours total · Environment: your own VM with Docker Engine installed (Lab 0)
 > Prerequisites: [M16](../../M16-package-management/README.md) (packages), [M20](../../M20-systemd-services/README.md) (services), [M27](../../M27-python-jupyter-data/README.md) (Python environments), [M26](../../M26-git-dev-workflows/README.md) recommended

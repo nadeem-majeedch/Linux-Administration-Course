@@ -53,7 +53,7 @@ covers the *machine*, and its template is worth memorizing:
 Three properties separate a runbook from a document: **commands are
 exact and expected outputs are stated** (M24's evidence discipline);
 **failure playbooks link the drill cards with box-specific facts**
-(the method from M23-clinic, pre-localized); and **the change log is
+(the method from M32-clinic, pre-localized); and **the change log is
 append-only** — history is data, not narrative.
 
 ## 3. The operational calendar
@@ -122,7 +122,7 @@ shares the failure domain it reports on — a dead box reports nothing
 inside checks can't say. (3) The monthly timed test-restore; it
 produces a logged RTO and a verification checksum — converting "we
 have backups" into "restores work, in N minutes." (4) Because the
-review is *evidence* (M24/M23-clinic discipline): saved outputs make
+review is *evidence* (M24/M32-clinic discipline): saved outputs make
 the review comparable over time and the findings arguable — memory
 makes both impossible.
 

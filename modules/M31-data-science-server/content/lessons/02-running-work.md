@@ -46,7 +46,7 @@ your own runs.
 
 ## 2. Launching jobs that behave
 
-Before any long job: the pre-flight (M23-clinic's evidence habit,
+Before any long job: the pre-flight (M32-clinic's evidence habit,
 turned inward):
 
 1. **Estimate the footprint** — peak RSS from a scaled-down run

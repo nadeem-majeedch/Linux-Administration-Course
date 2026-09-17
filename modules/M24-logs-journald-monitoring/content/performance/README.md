@@ -46,7 +46,7 @@ healthy). This is the USE method framing, applied per resource.
   A diagnosis without evidence is a guess with punctuation.
 
 **Where this feeds forward:** the
-[Linux Performance & Troubleshooting capstone](../../../M23-linux-performance-troubleshooting/content/README.md)
+[Linux Performance & Troubleshooting capstone](../../../M32-linux-performance-troubleshooting/content/README.md)
 assumes exactly these evidence chains — this clinic is its warm-up.
 
 Up next: [Lesson 1 — CPU performance](01-cpu-performance.md)

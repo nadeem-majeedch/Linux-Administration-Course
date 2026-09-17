@@ -32,13 +32,14 @@ mkdir -p "$DST"
 echo ">> copying course content (byte-for-byte)"
 # 1:1 trees — every relative link inside these keeps working. MkDocs maps
 # each directory's README.md to the directory index (clean URLs, no rewriting).
-cp -r modules projects assessments datasets resources cheatsheets labs "$DST/"
+cp -r modules projects assessments datasets resources cheatsheets labs accreditation "$DST/"
 
 echo ">> root pages"
 # Copied under their ORIGINAL names: module pages link up to them via relative
 # paths like ../../CONTRIBUTING.md, which must keep resolving. README.md at
 # the docs root becomes the site homepage (MkDocs native README-as-index).
 cp README.md SETUP.md COURSE-ROADMAP.md CONTRIBUTING.md "$DST/"
+cp QA-REPORT.md FINAL-AUDIT.md "$DST/" 2>/dev/null || true
 # WEBSITE.md is also copied so the site.md link resolves on the site.
 cp WEBSITE.md "$DST/WEBSITE.md"
 

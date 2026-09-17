@@ -50,7 +50,7 @@ The contract's rules, each traceable to a module:
   and `/scratch` is the sacrifice layer (fast disk, no backup, purge
   policy). Putting a 200 GB intermediate in `$HOME` is the classic
   first-week sin: it fills the backup volume (card 2 of the
-  M23-clinic) and isn't even the right disk for the job.
+  M32-clinic) and isn't even the right disk for the job.
 - **Permissions encode the workflow** — `/data` read-only via mode
   bits (M27's guard), project directories group-shared with SGID
   (M13's `2770`), `$HOME` yours alone. On a shared box, permissions

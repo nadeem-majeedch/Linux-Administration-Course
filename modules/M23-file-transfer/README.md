@@ -1,35 +1,28 @@
-# M23 — File Transfer: SCP, SFTP, rsync
+# M23 — File Transfer & Synchronization
 
-> Unit 6 · Services, Networking and Security
-> Difficulty: Intermediate · Prerequisites: M22
+> **Unit 6 · Services, Networking & Security** · Difficulty: Intermediate
+> [Content index](content/README.md) · [Labs](content/labs/README.md) · [Quiz](content/practice/quiz.md) · [Challenges](content/practice/challenges.md)
+> Companion to [M22 — SSH & Remote Administration](../M22-ssh-remote-admin/content/README.md)
 
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+## Summary
 
-## What this module covers
+Moving data between machines — laptops to lab servers, servers to
+storage, datasets in and results out — is a daily Data Science
+operation with real failure modes: silent overwrites, interrupted
+transfers, ambiguous deletions, and unprovable "it got there"
+claims. This module teaches the three-tool transfer toolbox (`scp`,
+`sftp`, `rsync`), rsync's comparison and deletion semantics, and the
+verification habits (dry-run gates, sha256 manifests, transfer
+logs) that make transfers auditable rather than assumed.
 
-scp, sftp, and rsync; delta syncs, dry-run discipline, exclude filters, and verified dataset transfers.
+## Objectives, labs, assessment
 
-The full specification — learning objectives, concepts, command-line skills,
-laboratory, exercises, mini-project, and the Data Science connection — lives in
-[COURSE-ROADMAP.md](../../COURSE-ROADMAP.md), Unit 6.
+Full objectives and the module map live in
+[content/README.md](content/README.md). Labs are loopback-only
+(inside your own VM); the quiz key is instructor-held
+([quiz-answers.md](content/practice/quiz-answers.md)).
 
-## Before you start
+## Roadmap entry
 
-- [ ] Prerequisites complete: M22
-- [ ] Lab environment working ([SETUP.md](../../SETUP.md))
-- [ ] `lab-log.md` exists in your home directory
-
-## Definition of done
-
-- [ ] Laboratory completed; outputs recorded in `lab-log.md`
-- [ ] Exercises attempted without looking up every answer
-- [ ] Roadmap self-check questions answered aloud
-- [ ] Mini-project submitted (if defined for this module)
-
-## Module links
-
-- Roadmap: [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md#unit-6--services-networking--security-m20m25)
-- Cheatsheets: [resources/cheatsheets/](../../resources/cheatsheets/)
-- Fixes and questions: open an issue per [CONTRIBUTING.md](../../CONTRIBUTING.md)
+See [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md), Unit 6 —
+M23 File Transfer & Synchronization (prerequisites: M10, M19, M22).

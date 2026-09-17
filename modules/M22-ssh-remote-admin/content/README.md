@@ -1,5 +1,20 @@
 # Module 22 — SSH & Remote Administration · Content Index
 
+## Objectives & navigation
+
+The module's formal **learning objectives, concepts, command-line skills,
+laboratory, exercises, and Data Science connection** are specified in the
+roadmap: [COURSE-ROADMAP.md — Unit 6 · Services, Networking & Security](../../../COURSE-ROADMAP.md#unit-6--services-networking--security-m20m25).
+This page indexes the material; the lessons deliver it.
+
+| Layer | Where |
+|---|---|
+| Objectives & module contract | [Roadmap](../../../COURSE-ROADMAP.md#unit-6--services-networking--security-m20m25) + [module README](../README.md) |
+| Lessons | below, in order — do the end-of-lesson self-checks |
+| Labs | [labs/README.md](labs/README.md) |
+| Practice | [practice/](practice/) — quiz (+ instructor key), challenges |
+| Troubleshooting | [troubleshooting.md](troubleshooting.md) |
+
 > **Status:** Content complete — 4 lessons, 2 labs (incl. a 5-patient
 > diagnosis clinic), quiz + key, 8 challenges, troubleshooting guide,
 > Mini-Project D.

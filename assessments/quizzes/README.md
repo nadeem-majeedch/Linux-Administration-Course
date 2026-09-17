@@ -8,7 +8,7 @@
 >
 > **Where the quizzes live:** the bank is complete as per-module
 > practice quizzes at `modules/M*/content/practice/quiz.md` (+
-> answer keys) — 595 questions across M01–M29, audited against the
+> answer keys) — ~620 questions across M01–M32, audited against the
 > anti-memorization rules below. This directory holds the **format
 > exemplar** ([quiz-m12.md](quiz-m12.md), key alongside) that new
 > quiz authors copy, plus this index.
@@ -39,7 +39,7 @@
 | M20 systemd-services | quiz.md | Unit failure triage from `systemctl`/journal evidence |
 | M21 networking-fundamentals | quiz.md | Network layer-by-layer diagnosis from tool outputs |
 | M22 ssh-remote-admin | quiz.md | SSH failure diagnosis: auth, keys, config, tunnels |
-| M23 linux-performance-troubleshooting | quiz.md | Transfer/performability reasoning; the 8-step method |
+| M23 file-transfer | quiz.md | Transfer tool selection, rsync semantics (`--delete`/slash/verification) reasoning |
 | M24 logs-journald-monitoring | quiz.md | Log/journal forensics and monitoring interpretation |
 | M25 security-firewall | quiz.md | Firewall logic and hardening trade-offs |
 | M26 git-dev-workflows | quiz.md | Git history reasoning: what did this command change |
@@ -48,6 +48,7 @@
 | M29 web-servers-databases | quiz.md | Web/db service diagnosis and reverse-proxy reasoning |
 | M30 capstone | — | assessed via [../project-rubric.md](../project-rubric.md) + [../viva-questions.md](../viva-questions.md) |
 | M31 data-science-server | — | assessed via [labs/ Level 5](../../labs/level-5-ds-server.md) + capstone |
+| M32 performance-troubleshooting (companion) | [quiz](../../modules/M32-linux-performance-troubleshooting/content/practice/quiz.md) | The 8-step method, method-graded |
 
 ## Writing standard (for contributors)
 

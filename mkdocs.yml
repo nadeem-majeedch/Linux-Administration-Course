@@ -137,6 +137,13 @@ nav:
           - "M21 · Networking Fundamentals": modules/M21-networking-fundamentals/README.md
           - "M22 · SSH & Remote Administration": modules/M22-ssh-remote-admin/README.md
           - "M23 · File Transfer: SCP, SFTP, rsync": modules/M23-file-transfer/README.md
+          - "M23 lessons · Toolbox": modules/M23-file-transfer/content/lessons/01-transfer-toolbox.md
+          - "M23 lessons · rsync fundamentals": modules/M23-file-transfer/content/lessons/02-rsync-fundamentals.md
+          - "M23 lessons · Automation & verification": modules/M23-file-transfer/content/lessons/03-automation-and-verification.md
+          - "M23 labs": modules/M23-file-transfer/content/labs/README.md
+          - "M23 quiz": modules/M23-file-transfer/content/practice/quiz.md
+          - "M23 challenges": modules/M23-file-transfer/content/practice/challenges.md
+          - "M23 troubleshooting": modules/M23-file-transfer/content/troubleshooting.md
           - "M24 · Logs, journald & Monitoring": modules/M24-logs-journald-monitoring/README.md
           - "M25 · Security & Firewall": modules/M25-security-firewall/README.md
       - Unit 7 — The Data Science Stack:
@@ -147,6 +154,7 @@ nav:
       - Unit 8 — Capstone:
           - "M30 · Capstone Project": modules/M30-capstone-project/README.md
           - "M31 · The Data Science Server (companion)": modules/M31-data-science-server/README.md
+          - "M32 · Performance & Troubleshooting Clinic (companion)": modules/M32-linux-performance-troubleshooting/README.md
   - Practice:
       - Progressive Labs (Levels 1–5): labs/README.md
       - Mini-Projects: projects/mini-projects/README.md
@@ -166,4 +174,7 @@ nav:
       - Datasets: datasets/README.md
   - About:
       - About This Website: site.md
+      - Accreditation & CLOs: accreditation/ACCREDITATION-ONE-PAGER.md
+      - CLO × Assessment Alignment: accreditation/CLO-ASSESSMENT-ALIGNMENT.md
+      - CLO × Module Mapping: accreditation/CLO-MAPPING-MATRIX.md
       - Contributing: CONTRIBUTING.md

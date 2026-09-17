@@ -42,7 +42,7 @@ On completion you can:
   monitoring report, and answers to "what happened at 02:00?" from evidence
   (M18, M24, clinics).
 - **LO7 — Recover:** back up and *prove* restore; diagnose an injected incident
-  via the eight-step method (M23-clinic, M24 §5).
+  via the eight-step method (M32-clinic, M24 §5).
 - **LO8 — Automate & package:** deliver Bash automation passing shellcheck and
   a reproducibility story (pinned venv and/or Docker) (M10/M11, M26–M28).
 - **LO9 — Document & present:** write operator-grade documentation and defend
@@ -117,7 +117,7 @@ Every item cites its module; each must be *evidenced*, not claimed.
     pinned base, tagged by commit SHA.
 16. **Security hardening** (M25): checklist applied and *documented with
     evidence*; secrets management per §7.
-17. **Troubleshooting** (M23-clinic): one **instructor-injected incident**
+17. **Troubleshooting** (M32-clinic): one **instructor-injected incident**
     diagnosed from evidence and written up (see §9); your own incident notes
     from the build weeks.
 18. **Documentation** (§8): runbook, architecture diagram, README, incident
@@ -155,7 +155,7 @@ get three scheduled runs logged end-to-end. Commit small, commit often.
 system and document with evidence; stand up `health.sh` and the watchdog;
 build `backup.sh` with restore mode and **perform the restore test**; then
 survive the injected incident: diagnose from evidence only, write
-`incident-report.md` (eight-step method, M23-clinic template).
+`incident-report.md` (eight-step method, M32-clinic template).
 
 **Week 5 — Document & present (Phases 4–5).** Peer-test the runbook (a
 classmate performs two operations using *only* your document — their friction
@@ -203,7 +203,7 @@ demo per the rubric's four beats. The viva follows the demo.
   method (define → evidence → component → hypotheses → safe test → fix →
   verify → document), evidence quoted, prevention concrete.
 - **Your own incident notes**: during build weeks, failures you solved go into
-  `lab-log.md` as mini-reports (M23-clinic's journal discipline). Two good
+  `lab-log.md` as mini-reports (M32-clinic's journal discipline). Two good
   self-reported incidents ≈ one injected one in viva currency.
 - The demo includes **breaking something benign live** and recovering using
   your own runbook — the runbook's accuracy is thereby tested in public.

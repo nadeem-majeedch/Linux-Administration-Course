@@ -1,5 +1,20 @@
 # Module 26 — Git and Development Workflows
 
+## Objectives & navigation
+
+The module's formal **learning objectives, concepts, command-line skills,
+laboratory, exercises, and Data Science connection** are specified in the
+roadmap: [COURSE-ROADMAP.md — Unit 7 · The Data Science Stack](../../../COURSE-ROADMAP.md#unit-7--the-data-science-stack-m26m29).
+This page indexes the material; the lessons deliver it.
+
+| Layer | Where |
+|---|---|
+| Objectives & module contract | [Roadmap](../../../COURSE-ROADMAP.md#unit-7--the-data-science-stack-m26m29) + [module README](../README.md) |
+| Lessons | below, in order — do the end-of-lesson self-checks |
+| Labs | [labs/README.md](labs/README.md) |
+| Practice | [practice/](practice/) — quiz (+ instructor key), challenges |
+| Troubleshooting | [troubleshooting.md](troubleshooting.md) |
+
 > Unit 7 · The Data Science Stack · Difficulty: Intermediate
 > Time: ~6 hours total · Environment: your own VM (nothing here needs sudo after install)
 > Prerequisites: [M10](../../M10-bash-scripting/README.md) (shell fluency), [M13](../../M13-ownership-shared-access/README.md) (permissions), [M22](../../M22-ssh-remote-admin/README.md) (SSH keys)

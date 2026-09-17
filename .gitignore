@@ -5,6 +5,7 @@ Thumbs.db
 *~
 .vscode/
 .idea/
+.freebuff/
 
 # Python artifacts (labs generate these)
 __pycache__/

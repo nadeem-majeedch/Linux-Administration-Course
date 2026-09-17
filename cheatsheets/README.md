@@ -34,7 +34,7 @@
 | 16 | [python-environments.md](python-environments.md) | venv, pip, PATH, pinning | M15, M27 |
 | 17 | [jupyter.md](jupyter.md) | servers, kernels, tunnels, hygiene | M27, M31 |
 | 18 | [docker.md](docker.md) | images, containers, volumes, compose | M28 |
-| 19 | [troubleshooting.md](troubleshooting.md) | the 8-step method, evidence ladder | M23-clinic |
+| 19 | [troubleshooting.md](troubleshooting.md) | the 8-step method, evidence ladder | M32-clinic |
 | 20 | [data-science-linux.md](data-science-linux.md) | the DS working set on one page | M31 |
 
 Per-unit quick references also live in

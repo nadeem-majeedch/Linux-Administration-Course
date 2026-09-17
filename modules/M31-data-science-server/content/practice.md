@@ -170,7 +170,7 @@ lab artifact demonstrates both?
     reaching the same numbers.
 19. Because leftover state *is* an administrative condition: idle
     kernels hold resources others need, un-purged scratch becomes
-    next month's disk-full incident (M23-clinic card 2), and the
+    next month's disk-full incident (M32-clinic card 2), and the
     cleanup census is the same evidence discipline as every other
     scenario — the box's health is part of the work.
 20. "Hi — `nvidia-smi` shows your PID 5432 holding 20 GiB on GPU 0 at
@@ -220,7 +220,7 @@ right — prove it).
 
 **C5 — The shared-server incident.** Your colleague (the `colleague`
 account) fills `/scratch` to 95% with an abandoned 3 GB file while
-your training runs. Walk the M23-clinic disk-full card *from the
+your training runs. Walk the M32-clinic disk-full card *from the
 user side*: diagnose (`df`, `du` on the shared FS), escalate to the
 "admin" (you, sudo — but write the ticket you'd send a real one),
 and state what the *policy* fix is (purge daemon? quotas?). No

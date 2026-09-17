@@ -52,7 +52,7 @@ $ terraform destroy   # remove everything the manifest created (tag-scoped)
 **`plan` is the feature.** Every change — a new instance, a resized
 disk, an opened port — arrives as a readable diff (`+ create`, `~
 update in-place`, `- destroy`) *before* it happens. The M11
-dry-run discipline and the M23-clinic blast-radius sentence, made into
+dry-run discipline and the M32-clinic blast-radius sentence, made into
 a product: infrastructure changes become reviewable text, and the
 "who opened that port?" archaeology becomes `git log` on the `.tf`
 file.
@@ -117,7 +117,7 @@ second port, the pipeline smoke-tests it, nginx's `proxy_pass` flips
 (M29's one-line config change + reload), and the old unit stays
 stopped-but-present for one working day — rollback as a
 `systemctl --user start`, not an archaeology. The verify step (health
-endpoint through the *public* path) is the M23-clinic discipline, and
+endpoint through the *public* path) is the M32-clinic discipline, and
 the keep-the-old window is the runbook's rollback section (Extension A
 lesson 3) made real.
 
@@ -159,7 +159,7 @@ old — M24's evidence habit as a deployment gate.
 produces half-tracked state — objects exist that the declarative tool
 can't see or reconcile. (2) Because it renders the *diff before the
 change* — reviewable, arguable, abortable; it's the M11 dry-run +
-M23-clinic blast-radius sentence, productized. (3) Sensitivity (it can
+M32-clinic blast-radius sentence, productized. (3) Sensitivity (it can
 contain secrets/attributes) and load-bearingness (it's the
 reality-bridge; loss or tampering desynchronizes manifest and world).
 (4) Smoke-test through the *public* path (health endpoint); flip the

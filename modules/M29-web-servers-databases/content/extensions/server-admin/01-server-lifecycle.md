@@ -114,7 +114,7 @@ log "OK: $TARGET_HOST provisioned"
 
 Idempotency carries the re-run guarantee (`||` on "already exists"
 *is* the idempotent form); the verify block is step 7 of the
-troubleshooting method (M23-clinic) built into the artifact; and the
+troubleshooting method (M32-clinic) built into the artifact; and the
 log lines are the provisioning *documentation* generated as a
 by-product. This script — improved incrementally for the rest of the
 extension — is the lab's deliverable.
@@ -142,7 +142,7 @@ in version control (M26):
   trade; mixed practice uses both layers.
 - Hostname conventions and host resolution are fleet infrastructure —
   set them at birth.
-- Idempotent, logged, self-verifying scripts: M11 + M24 + M23-clinic
+- Idempotent, logged, self-verifying scripts: M11 + M24 + M32-clinic
   lessons fused into provisioning.
 
 ## Check yourself

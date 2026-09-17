@@ -1,5 +1,20 @@
 # Module 23 — Linux Performance & Troubleshooting · Content Index
 
+## Objectives & navigation
+
+The module's formal **learning objectives, concepts, command-line skills,
+laboratory, exercises, and Data Science connection** are specified in the
+roadmap: [COURSE-ROADMAP.md — Unit 8 · Capstone (companion)](../../../COURSE-ROADMAP.md#unit-8--capstone-m30).
+This page indexes the material; the lessons deliver it.
+
+| Layer | Where |
+|---|---|
+| Objectives & module contract | [Roadmap](../../../COURSE-ROADMAP.md#unit-8--capstone-m30) + [module README](../README.md) |
+| Lessons | below, in order — do the end-of-lesson self-checks |
+| Labs | [labs/README.md](labs/README.md) |
+| Practice | [practice/](practice/) — quiz (+ instructor key), challenges |
+| Troubleshooting | [scenarios/](scenarios/) — staged incidents + drill book |
+
 > Unit 6 capstone · Difficulty: Advanced
 > Time: ~7 hours total · Environment: your own VM
 > Prerequisites: [M18](../../M18-processes-jobs-signals/README.md), [M20](../../M20-systemd-services/README.md), [M21](../../M21-networking-fundamentals/README.md), [M24](../../M24-logs-journald-monitoring/README.md) incl. the [Performance Clinic](../../M24-logs-journald-monitoring/content/performance/README.md)

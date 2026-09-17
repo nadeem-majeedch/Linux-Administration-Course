@@ -1,5 +1,20 @@
 # Module 01 — What Is Linux? (Foundations of Linux)
 
+## Objectives & navigation
+
+The module's formal **learning objectives, concepts, command-line skills,
+laboratory, exercises, and Data Science connection** are specified in the
+roadmap: [COURSE-ROADMAP.md — Unit 1 · Foundations of Linux](../../../COURSE-ROADMAP.md#unit-1--foundations-of-linux-m01m04).
+This page indexes the material; the lessons deliver it.
+
+| Layer | Where |
+|---|---|
+| Objectives & module contract | [Roadmap](../../../COURSE-ROADMAP.md#unit-1--foundations-of-linux-m01m04) + [module README](../README.md) |
+| Lessons | below, in order — do the end-of-lesson self-checks |
+| Labs | [labs/README.md](labs/README.md) |
+| Practice | [practice/](practice/) — quiz (+ instructor key), challenges |
+| Troubleshooting | [troubleshooting.md](troubleshooting.md) |
+
 > Unit 1 · Foundations of Linux
 > Difficulty: Beginner · Prerequisites: none
 > Environment: read-along now, hands-on from Lesson 8 (Setup) onward

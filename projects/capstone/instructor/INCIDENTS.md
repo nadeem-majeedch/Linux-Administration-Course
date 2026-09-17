@@ -3,7 +3,7 @@
 > The instructor stages ONE incident per student (unannounced, from a
 > different category than the student's own drill-card practice if known).
 > The student receives the **symptom only**; grading follows the eight-step
-> method (M23-clinic): evidence-first, hypotheses, safe tests, verify the
+> method (M32-clinic): evidence-first, hypotheses, safe tests, verify the
 > *original symptom*, document.
 >
 > All incidents are staged on the student's own VM, touch only lab-created

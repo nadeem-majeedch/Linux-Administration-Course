@@ -27,7 +27,7 @@ Each answer cites the lesson to revisit.
 10. **Files with `.` or `~` in their names are ignored by the includedir**
     — so renaming `foo` → `foo.bak` (or `foo.old`) disables a rule without
     deleting it. (L1 §4, Lab 1 Part E)
-11. ```
+11. ```text
     %sync ALL=(root) NOPASSWD: /usr/local/bin/mirror-datasets
     ```
     Risk: whatever that script can do, the group can now do unattended.

@@ -11,7 +11,7 @@
 
 | Directory | Contents | Use |
 |---|---|---|
-| [quizzes/](quizzes/) | Exemplar bank: M12 format standard + the per-module index; per-module reasoning quizzes live in `modules/*/content/practice/` (595 questions) | weekly/biweekly |
+| [quizzes/](quizzes/) | Exemplar bank: M12 format standard + the per-module index; per-module reasoning quizzes live in `modules/*/content/practice/` (~620 questions) | weekly/biweekly |
 | [lab-assessments/](lab-assessments/) | Graded 20–30-min lab checks (LA-1…LA-5): task + 10-pt evidence rubric per level | end of each unit |
 | [exams/](exams/) | Midterm (Units 1–3), final (Units 4–7), practical exam — papers, keys, staging guide | midterm & end |
 | [assignments/](assignments/) | Three assignment specs (The Organized Analyst / Automated Pipeline / Remote Operator) | distributed |

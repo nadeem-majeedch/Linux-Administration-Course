@@ -35,7 +35,7 @@ Everything DevOps prescribes, you have done:
 | Config via env vars, secrets as files | M25 §5 / M27 / M28 |
 | Automated tests before deploy | M10/M11 — shellcheck, self-testing scripts |
 | Logs, health checks, monitoring | M24 / M29 — health.sh, drill cards |
-| Runbooks and postmortems | M23-clinic / Extension A |
+| Runbooks and postmortems | M32-clinic / Extension A |
 | Infrastructure as code | Extension A — the provisioning manifest |
 
 What's genuinely new here is only the **automation of the carry** —

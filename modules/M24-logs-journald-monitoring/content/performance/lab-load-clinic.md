@@ -178,6 +178,6 @@ $ docker ps -a | grep lab24 || echo "nothing containerized here"
       changed your mental model most
 
 **Where this feeds forward:** the
-[troubleshooting capstone](../../../M23-linux-performance-troubleshooting/content/README.md)
+[troubleshooting capstone](../../../M32-linux-performance-troubleshooting/content/README.md)
 assumes exactly these evidence chains — the clinic is its warm-up
 round.

@@ -1,5 +1,20 @@
 # Module 10 — Bash Scripting · Content Index
 
+## Objectives & navigation
+
+The module's formal **learning objectives, concepts, command-line skills,
+laboratory, exercises, and Data Science connection** are specified in the
+roadmap: [COURSE-ROADMAP.md — Unit 3 · Shell Scripting & Automation](../../../COURSE-ROADMAP.md#unit-3--shell-scripting--automation-m10m11).
+This page indexes the material; the lessons deliver it.
+
+| Layer | Where |
+|---|---|
+| Objectives & module contract | [Roadmap](../../../COURSE-ROADMAP.md#unit-3--shell-scripting--automation-m10m11) + [module README](../README.md) |
+| Lessons | below, in order — do the end-of-lesson self-checks |
+| Labs | [labs/README.md](labs/README.md) |
+| Practice | [practice/](practice/) — quiz (+ instructor key), challenges |
+| Troubleshooting | [troubleshooting.md](troubleshooting.md) |
+
 > **Status:** Content complete — 5 lessons, 2 labs (incl. 8 fix-the-bug
 > scripts), quiz + key, 8 challenges, troubleshooting guide, Mini-Project A.
 > Module contract: [../README.md](../README.md) · Difficulty: Intermediate.

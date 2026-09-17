@@ -1,6 +1,6 @@
 # 19 — Troubleshooting
 
-> Learn it: [The Troubleshooting Clinic](../modules/M23-linux-performance-troubleshooting/content/README.md) ·
+> Learn it: [The Troubleshooting Clinic](../modules/M32-linux-performance-troubleshooting/content/README.md) ·
 > Lookup, not understanding — the method *is* the assessed skill.
 
 ## The eight steps (in order, every time)

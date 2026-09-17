@@ -920,6 +920,13 @@ junior server administrators — the role they'll play around shared GPU machine
 
 ### M23 — File Transfer: SCP, SFTP, rsync
 
+- **Status:** content complete (2026-09) — 3 lessons (tool selection &
+  scp/sftp precision; rsync fundamentals — flags, trailing slash, `--delete`
+  discipline, resume; automation & verification — guarded sync script, sha256
+  manifests, large-dataset playbook), 2 loopback labs (dataset sync circuit incl.
+  sacrificial `--delete` demonstration; transfer automation weekly loop), 20-scenario
+  quiz + instructor key, 3 challenges, 8-pattern troubleshooting page
+  (`modules/M23-file-transfer/`). Prerequisite chain preserved (M10, M19, M22).
 - **Difficulty:** Intermediate
 - **Prerequisites:** M22
 - **Learning objectives**
@@ -959,8 +966,9 @@ junior server administrators — the role they'll play around shared GPU machine
 - **Difficulty:** Advanced
 - **Prerequisites:** M20, M18
 - **Companion module (2026-09):** the **Performance & Troubleshooting clinic**
-  (`modules/M23-linux-performance-troubleshooting/`, numbered dir, pairs with the
-  Performance Clinic extension above) — the eight-step methodology, twelve
+  (`modules/M32-linux-performance-troubleshooting/`, companion module M32 — the
+course ships two companions beyond the numbered M01–M30: M31 Data Science Server
+and M32 this clinic — pairs with the Performance Clinic extension above) — the eight-step methodology, twelve
   drill cards (server-slow, disk-full, memory, CPU, hangs, services, DNS,
   connectivity, permissions, Python env, package installs, Jupyter), the
   four-incident **Drill Book**, quiz + key, 8 challenges. Method-graded; all
@@ -1343,7 +1351,7 @@ data-science system — the course's proof of competence.
 
 - **Difficulty:** Advanced · **Prerequisites:** M20, M22, M24-clinics, M26–M29
 - **Status:** content complete (2026-09) — the capstone companion module
-  (`modules/M31-data-science-server/`, paired with M30 like the M23-clinic):
+  (`modules/M31-data-science-server/`, paired with M30 like the M32-clinic):
   3 consolidation lessons (server anatomy: directory contract, venv/pip/conda
   concepts, GPU/CUDA at the administrative level with `nvidia-smi` literacy and
   CPU-only twins; running work: tmux/tee survival, pre-flight checklist, Jupyter

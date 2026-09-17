@@ -1,5 +1,20 @@
 # M15 — Environment Variables & Dotfiles
 
+## Objectives & navigation
+
+The module's formal **learning objectives, concepts, command-line skills,
+laboratory, exercises, and Data Science connection** are specified in the
+roadmap: [COURSE-ROADMAP.md — Unit 4 · System Administration](../../../COURSE-ROADMAP.md#unit-4--system-administration-m12m15).
+This page indexes the material; the lessons deliver it.
+
+| Layer | Where |
+|---|---|
+| Objectives & module contract | [Roadmap](../../../COURSE-ROADMAP.md#unit-4--system-administration-m12m15) + [module README](../README.md) |
+| Lessons | below, in order — do the end-of-lesson self-checks |
+| Labs | [labs/README.md](labs/README.md) |
+| Practice | [practice/](practice/) — quiz (+ instructor key), challenges |
+| Troubleshooting | [troubleshooting.md](troubleshooting.md) |
+
 > The configuration layer of your shell — and the #1 source of "works
 > in my terminal, fails in my script/notebook/cron" bugs. By the end,
 > environment debugging is a three-command reflex.

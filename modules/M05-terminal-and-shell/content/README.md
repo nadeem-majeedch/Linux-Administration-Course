@@ -17,6 +17,7 @@ login & orientation, man-page tour) live in
 [M01's content](../../M01-what-is-linux/content/labs/README.md).
 
 **Practice** — [practice/quiz-aliases-history.md](practice/quiz-aliases-history.md)
+(key held separately for instructors: [quiz-aliases-history-key.md](practice/quiz-aliases-history-key.md))
 (10 Q with key) · [practice/challenges.md](practice/challenges.md)
 (5 challenges, ★–★★★).
 

@@ -42,7 +42,7 @@ This course closes that gap. By the end you will be able to:
 |---|---|
 | Primary environment | **Ubuntu LTS** (24.04 LTS or newer) |
 | How you'll run it | VirtualBox VM (recommended), WSL2 (Windows alternative), native install (optional) |
-| Total modules | **30** (M01–M30) in 8 units |
+| Total modules | **30 numbered modules** (M01–M30) in 8 units, **plus 2 companion modules** (M31 Data Science Server, M32 Performance & Troubleshooting Clinic) — 32 module directories in total |
 | Suggested pace | 1 module/week → 2 semesters; 2 modules/week → 1 semester |
 | Capstone | M30: a complete, deployed, documented data-science system |
 | Root access | **Not assumed** — the course works on shared and lab machines (see [SETUP.md](SETUP.md)) |
@@ -58,6 +58,7 @@ Linux-Administration-Course/
 ├── COURSE-ROADMAP.md        ← full curriculum: units, modules, objectives, DS links
 ├── SETUP.md                 ← environment setup (VM, WSL2, tools)
 ├── WEBSITE.md               ← how this repo publishes its website (MkDocs + Pages)
+├── accreditation/           ← proposed CLOs, alignment matrices, course one-pager
 ├── CONTRIBUTING.md          ← how to contribute content, style, review process
 ├── LICENSE                  ← MIT license
 ├── mkdocs.yml               ← website configuration (navigation, theme)
@@ -68,8 +69,9 @@ Linux-Administration-Course/
 │   └── build-site.sh        ← assembles the website sources from repo content
 ├── modules/
 │   ├── M01-what-is-linux/
-│   ├── ...                  ← 30 module folders, M01–M30 (+ M31 companion)
-│   └── M31-data-science-server/
+│   ├── ...                  ← 30 numbered modules, M01–M30
+│   ├── M31-data-science-server/   ← companion: DS server operations
+│   └── M32-linux-performance-troubleshooting/ ← companion: the clinic
 ├── projects/
 │   ├── mini-projects/       ← standalone mini-project briefs
 │   └── capstone/            ← student pack + instructor pack (rubric, viva)
@@ -184,7 +186,7 @@ Instructors can adapt weights; the grading rubric for each component ships with 
 | 20 | [systemd, Services & Boot](modules/M20-systemd-services/README.md) | 6. Services & Networking |
 | 21 | [Networking Fundamentals](modules/M21-networking-fundamentals/README.md) | 6. Services & Networking |
 | 22 | [SSH & Remote Administration](modules/M22-ssh-remote-admin/README.md) | 6. Services & Networking |
-| 23 | [File Transfer: SCP, SFTP, rsync](modules/M23-file-transfer/README.md) | 6. Services & Networking |
+| 23 | [File Transfer: SCP, SFTP, rsync](modules/M23-file-transfer/README.md) — **content complete 2026-09** | 6. Services & Networking |
 | 24 | [Logs, journald & Monitoring](modules/M24-logs-journald-monitoring/README.md) | 6. Services & Networking |
 | 25 | [Security & Firewall](modules/M25-security-firewall/README.md) | 6. Services & Networking |
 | 26 | [Git & Development Workflows](modules/M26-git-dev-workflows/README.md) | 7. Data Science Stack |
@@ -193,7 +195,9 @@ Instructors can adapt weights; the grading rubric for each component ships with 
 | 29 | [Web Servers, Databases & Deployment](modules/M29-web-servers-databases/README.md) | 7. Data Science Stack |
 | 30 | [Capstone Project](modules/M30-capstone-project/README.md) | 8. Capstone |
 
-*(Unit 8 is the capstone itself.)*
+*(Unit 8 is the capstone itself. Two **companion modules** complete the set:
+[M31 — The Data Science Server](modules/M31-data-science-server/README.md) and
+[M32 — Performance & Troubleshooting Clinic](modules/M32-linux-performance-troubleshooting/README.md).)*
 
 ---
 
@@ -293,6 +297,8 @@ on any broken internal link, so problems surface before publication.
 - [resources/glossary.md](resources/glossary.md) — plain-language glossary of terms.
 - [resources/references.md](resources/references.md) — official documentation links.
 - [resources/cheatsheets/](resources/cheatsheets/) — printable one-pagers per unit.
+- [accreditation/](accreditation/) — proposed CLOs, CLO×assessment alignment
+  matrix, module×CLO mapping, and the course one-pager for curriculum review.
 - [LICENSE](LICENSE) — MIT.
 
 ---
