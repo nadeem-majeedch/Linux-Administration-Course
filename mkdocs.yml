@@ -1,0 +1,169 @@
+# MkDocs configuration for the Linux-Administration-Course website.
+#
+# Why MkDocs + Material for MkDocs (rationale documented in WEBSITE.md):
+#   - plain Markdown in, clean static site out — repository content stays the
+#     single source of truth and is copied verbatim (relative links preserved)
+#   - pip-installable, no build framework to maintain, no external services
+#   - built-in search, mobile-friendly navigation, code-copy buttons
+#
+# Website sources are generated into site-src/ by scripts/build-site.sh.
+# NEVER edit site-src/ by hand — edit the repository files and re-run the script.
+
+site_name: Linux Administration Course
+site_description: >-
+  A university-level Linux course for BS Data Science students — from zero
+  experience to administering servers and deploying data-science workloads.
+site_author: Linux-Administration-Course contributors
+site_url: https://nadeem-majeedch.github.io/Linux-Administration-Course/
+
+repo_url: https://github.com/nadeem-majeedch/Linux-Administration-Course
+repo_name: Linux-Administration-Course
+edit_uri: edit/main/
+
+copyright: Content MIT-licensed — free to use and adapt for teaching with attribution.
+
+docs_dir: site-src
+site_dir: site
+
+# Fail the build on any warning (broken link, bad nav entry, ...) so that
+# publication problems surface in CI before students ever see them.
+strict: true
+
+theme:
+  name: material
+  language: en
+  font: false # system fonts only: no external font-CDN dependency
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.code.select
+    - search.highlight
+    - search.suggest
+    - search.share
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - toc:
+      permalink: true
+      # GitHub-compatible heading slugs: the repository's cross-page anchors
+      # (e.g. COURSE-ROADMAP.md#unit-1--foundations-of-linux-m01m04) were
+      # written for GitHub's slugger; this keeps them working on the site.
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+# Content QA on every build: warnings fail the build (strict: true), so a
+# broken internal link can never be published.
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+
+nav:
+  - Home: README.md
+  - Getting Started:
+      - Environment Setup: SETUP.md
+      - Course Roadmap: COURSE-ROADMAP.md
+  - Units:
+      - Unit 1 — Foundations of Linux:
+          - "M01 · What Is Linux?": modules/M01-what-is-linux/README.md
+          - "M02 · Linux Distributions": modules/M02-linux-distributions/README.md
+          - "M03 · Linux Architecture": modules/M03-linux-architecture/README.md
+          - "M04 · Installing Ubuntu in a VM": modules/M04-installing-linux-vms/README.md
+      - Unit 2 — Command Line Fluency:
+          - "M05 · The Terminal & Shell": modules/M05-terminal-and-shell/README.md
+          - "M06 · Filesystem Hierarchy & Navigation": modules/M06-filesystem-hierarchy/README.md
+          - "M07 · Files, Directories & Text Files": modules/M07-files-and-directories/README.md
+          - "M08 · Text Processing Toolkit": modules/M08-text-processing/README.md
+          - "M09 · Pipes, Redirection & Filters": modules/M09-pipes-and-redirection/README.md
+      - Unit 3 — Shell Scripting & Automation:
+          - "M10 · Bash Scripting": modules/M10-bash-scripting/README.md
+          - "M11 · Advanced Shell & Automation": modules/M11-advanced-shell-automation/README.md
+      - Unit 4 — System Administration:
+          - "M12 · Users, Groups & Permissions": modules/M12-users-groups-permissions/README.md
+          - "M13 · Ownership & Shared Access": modules/M13-ownership-shared-access/README.md
+          - "M14 · Sudo & the Root Principle": modules/M14-sudo-root-principle/README.md
+          - "M15 · Environment Variables & Configuration": modules/M15-environment-variables/README.md
+      - Unit 5 — Software, Storage & Time:
+          - "M16 · Package Management": modules/M16-package-management/README.md
+          - "M17 · Storage, Disks & Filesystems": modules/M17-storage-and-filesystems/README.md
+          - "M18 · Processes, Jobs & Signals": modules/M18-processes-jobs-signals/README.md
+          - "M19 · Scheduling: cron & systemd Timers": modules/M19-scheduling-cron-timers/README.md
+      - Unit 6 — Services, Networking & Security:
+          - "M20 · systemd, Services & Boot": modules/M20-systemd-services/README.md
+          - "M21 · Networking Fundamentals": modules/M21-networking-fundamentals/README.md
+          - "M22 · SSH & Remote Administration": modules/M22-ssh-remote-admin/README.md
+          - "M23 · File Transfer: SCP, SFTP, rsync": modules/M23-file-transfer/README.md
+          - "M24 · Logs, journald & Monitoring": modules/M24-logs-journald-monitoring/README.md
+          - "M25 · Security & Firewall": modules/M25-security-firewall/README.md
+      - Unit 7 — The Data Science Stack:
+          - "M26 · Git & Development Workflows": modules/M26-git-dev-workflows/README.md
+          - "M27 · Python, Jupyter & Data Workloads": modules/M27-python-jupyter-data/README.md
+          - "M28 · Docker & Containers": modules/M28-docker-containers/README.md
+          - "M29 · Web Servers, Databases & Deployment": modules/M29-web-servers-databases/README.md
+      - Unit 8 — Capstone:
+          - "M30 · Capstone Project": modules/M30-capstone-project/README.md
+          - "M31 · The Data Science Server (companion)": modules/M31-data-science-server/README.md
+  - Practice:
+      - Progressive Labs (Levels 1–5): labs/README.md
+      - Mini-Projects: projects/mini-projects/README.md
+      - Capstone Project Pack: projects/capstone/README.md
+      - Assessments:
+          - Overview: assessments/README.md
+          - Quizzes: assessments/quizzes/README.md
+          - Exams: assessments/exams/README.md
+          - Lab Assessments: assessments/lab-assessments/README.md
+          - Assignments: assessments/assignments/README.md
+          - Practical Exam: assessments/practical/practical-exam.md
+  - Resources:
+      - Cheatsheets (by topic): cheatsheets/README.md
+      - Cheatsheets (by unit): resources/cheatsheets/README.md
+      - Glossary: resources/glossary.md
+      - References: resources/references.md
+      - Datasets: datasets/README.md
+  - About:
+      - About This Website: site.md
+      - Contributing: CONTRIBUTING.md

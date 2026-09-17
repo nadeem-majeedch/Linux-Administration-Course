@@ -16,7 +16,11 @@ Answer in `lab-log.md`; key: [quiz-answers.md](quiz-answers.md).
    proves total compute consumed since start?
 9. **U** Why is low `free` in `free -h` usually fine? Which column is the
    honest one?
-10. **R** Command to find any PID by name *with* its full command line?
+10. **R** Two `python3` processes exist: one is your training script
+    (`train.py --full`), one is someone's idle REPL. Name one PID is
+    the risk — so what command identifies a process by name *and*
+    shows its full command line, letting you tell them apart before
+    any signal is sent?
 11. **U** What does `pstree -p PID` show that `ps aux` can't — and why
     does that matter before killing a launcher?
 12. **R** What does Ctrl-Z actually do to the foreground job (which state,

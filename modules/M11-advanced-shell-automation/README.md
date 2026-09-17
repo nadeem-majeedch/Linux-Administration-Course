@@ -3,13 +3,18 @@
 > Unit 3 · Shell Scripting and Automation
 > Difficulty: Intermediate · Prerequisites: M10
 
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+**Status: content complete** — 3 lessons, 2 labs (incl. the **final scripting
+challenge**), quiz + key, 8 challenges, troubleshooting guide, and the
+Mini-Project A hardening re-submission. Start at the
+[content index](content/README.md).
 
 ## What this module covers
 
-Production-grade automation: line processing, traps and cleanup, temp files, dry-runs, idempotency, and getopts.
+Production-grade automation: while-read mastery, IFS and field splitting, process
+substitution; traps for graceful death, mktemp, atomic write-then-rename; the
+safe-automation properties — dry-run via the `run()` doorway, idempotency,
+getopts options, env-overridable config — and the reusable-tool checklist that
+makes scripts safe to hand to colleagues and to cron.
 
 The full specification — learning objectives, concepts, command-line skills,
 laboratory, exercises, mini-project, and the Data Science connection — lives in
@@ -21,14 +26,9 @@ laboratory, exercises, mini-project, and the Data Science connection — lives i
 - [ ] Lab environment working ([SETUP.md](../../SETUP.md))
 - [ ] `lab-log.md` exists in your home directory
 
-## Definition of done
-
-- [ ] Laboratory completed; outputs recorded in `lab-log.md`
-- [ ] Exercises attempted without looking up every answer
-- [ ] Roadmap self-check questions answered aloud
-- [ ] Mini-project submitted (if defined for this module)
-
 ## Module links
+
+- Content index: [content/README.md](content/README.md) — lessons, labs, mini-project, practice
 
 - Roadmap: [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md#unit-3--shell-scripting--automation-m10m11)
 - Cheatsheets: [resources/cheatsheets/](../../resources/cheatsheets/)

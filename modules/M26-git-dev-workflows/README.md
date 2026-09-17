@@ -1,35 +1,32 @@
 # M26 — Git and Development Workflows
 
-> Unit 7 · The Data Science Stack
-> Difficulty: Intermediate · Prerequisites: M07, M15
-
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+> Unit 7 · The Data Science Stack · Difficulty: Intermediate
+> Prerequisites: M10 (shell scripting), M13 (permissions), M15 (environment), M22 (SSH)
 
 ## What this module covers
 
-Git fundamentals on Linux: commits, branches, merges, remotes, .gitignore; clean history as a course standard.
+Git from the first commit to daily collaboration: repositories, the staging
+area, commits, branches and merges, remotes, `.gitignore`, SSH-authenticated
+remotes, and the workflows Data Scientists actually use — all from the Linux
+command line, all inside your own VM (plus a local bare repo standing in for
+"the server").
 
-The full specification — learning objectives, concepts, command-line skills,
-laboratory, exercises, mini-project, and the Data Science connection — lives in
-[COURSE-ROADMAP.md](../../COURSE-ROADMAP.md), Unit 7.
+**Start here:** [content/README.md](content/README.md) — the module index.
 
-## Before you start
-
-- [ ] Prerequisites complete: M07, M15
-- [ ] Lab environment working ([SETUP.md](../../SETUP.md))
-- [ ] `lab-log.md` exists in your home directory
+| Piece | What you get |
+|---|---|
+| Lessons 1–3 | The Git model & core loop · branching & merging · remotes, `.gitignore`, SSH auth, workflows |
+| Labs 1–2 | Version the course work itself (build a real history) · break-and-repair clinic (detached HEAD, merge conflicts, divergence) |
+| Practice | Quiz + key, challenges C1–C8 |
+| Troubleshooting | 10 symptom→cause→fix patterns |
+| [Capstone lab](content/labs/lab-03-end-to-end-ds-workflow.md) | The full pipeline: SSH → Git → venv → data → Jupyter → analysis → output → Git |
 
 ## Definition of done
 
-- [ ] Laboratory completed; outputs recorded in `lab-log.md`
-- [ ] Exercises attempted without looking up every answer
-- [ ] Roadmap self-check questions answered aloud
-- [ ] Mini-project submitted (if defined for this module)
+- [ ] Labs 1–2 completed with evidence in `lab-log.md`
+- [ ] You can explain the three states (working tree, index, HEAD) without notes
+- [ ] Quiz attempted before the key; ≥2 challenges done
+- [ ] End-to-end lab walked start to finish
 
-## Module links
-
-- Roadmap: [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md#unit-7--the-data-science-stack-m26m29)
-- Cheatsheets: [resources/cheatsheets/](../../resources/cheatsheets/)
-- Fixes and questions: open an issue per [CONTRIBUTING.md](../../CONTRIBUTING.md)
+Module links: [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md) ·
+[SETUP.md](../../SETUP.md) · [CONTRIBUTING.md](../../CONTRIBUTING.md)

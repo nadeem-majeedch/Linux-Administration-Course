@@ -3,13 +3,19 @@
 > Unit 7 · The Data Science Stack
 > Difficulty: Advanced · Prerequisites: M20, M21, M25, M27
 
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+**Status: content complete** — 4 lessons, 2 labs, quiz + key, 8 challenges,
+troubleshooting guide. Start at the [content index](content/README.md).
 
 ## What this module covers
 
-nginx as reverse proxy, a FastAPI service under systemd, PostgreSQL essentials and pg_dump; deploy a small stack with a runbook.
+HTTP fundamentals and the full request path; nginx as static server and reverse
+proxy (server blocks, locations, logs, the config-test-reload discipline; Apache
+recognized by comparison); PostgreSQL essentials (roles/databases/privileges,
+psql, `\copy` CSV loading, `pg_dump` + verified restore, MySQL/MariaDB
+comparison); and the deployment model — the app as a systemd user unit with
+env-file config and health endpoint, TLS concepts with a self-signed demo —
+assembled in the deployment lab (nginx → FastAPI → Postgres) with an operations
+runbook.
 
 The full specification — learning objectives, concepts, command-line skills,
 laboratory, exercises, mini-project, and the Data Science connection — lives in
@@ -21,14 +27,9 @@ laboratory, exercises, mini-project, and the Data Science connection — lives i
 - [ ] Lab environment working ([SETUP.md](../../SETUP.md))
 - [ ] `lab-log.md` exists in your home directory
 
-## Definition of done
-
-- [ ] Laboratory completed; outputs recorded in `lab-log.md`
-- [ ] Exercises attempted without looking up every answer
-- [ ] Roadmap self-check questions answered aloud
-- [ ] Mini-project submitted (if defined for this module)
-
 ## Module links
+
+- Content index: [content/README.md](content/README.md) — lessons, labs, practice
 
 - Roadmap: [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md#unit-7--the-data-science-stack-m26m29)
 - Cheatsheets: [resources/cheatsheets/](../../resources/cheatsheets/)

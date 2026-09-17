@@ -20,7 +20,11 @@ Each answer cites the lesson to revisit.
    compute. (L1 §2, §5)
 9. Linux uses spare RAM for cache; `available` is the honest figure.
    (L1 §5)
-10. `pgrep -a NAME` (or `pgrep -af pattern`). (L1 §2)
+10. **`pgrep -af pattern`** — `-a` prints the full command line, `-f`
+    matches against it, so `train.py --full` and a bare REPL are
+    distinguishable *before* any signal. The habit it enforces:
+    identify first, kill second (`pkill` without a prior `pgrep -af`
+    is shooting in the dark). (L1 §2)
 11. The *shape* — independent jobs vs one launcher's children — which
     decides whether you kill the parent, the children, or both. (L1 §6)
 12. Sends SIGTSTP → job enters `T` (stopped), tracked by the shell as a

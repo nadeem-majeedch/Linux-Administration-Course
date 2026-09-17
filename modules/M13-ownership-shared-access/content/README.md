@@ -30,5 +30,5 @@
   prerequisites (bits, umask, identity).
 - [M18 processes](../../M18-processes-jobs-signals/README.md) —
   daemons and who they run as.
-- [Capstone](../../../projects/capstone/BRIEF.md) — shared trees and least
+- [Capstone](../../../projects/capstone/student/SPEC.md) — shared trees and least
   privilege are scored in RUBRIC §2.

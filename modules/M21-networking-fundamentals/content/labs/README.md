@@ -8,7 +8,7 @@
 | # | Lab | Focus | Time |
 |---|-----|-------|------|
 | 1 | [lab-01-local-network-lab.md](lab-01-local-network-lab.md) | Map your own machine: interfaces, routes, resolvers, sockets; the health check | ~45 min |
-| 2 | [lab-02-diagnosis-clinic.md](labs/lab-02-diagnosis-clinic.md) | Three local incidents (DNS, port, route) — diagnose with the layered playbook | ~50 min |
+| 2 | [lab-02-diagnosis-clinic.md](lab-02-diagnosis-clinic.md) | Three local incidents (DNS, port, route) — diagnose with the layered playbook | ~50 min |
 
 Standing rules (recap):
 

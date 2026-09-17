@@ -3,13 +3,20 @@
 > Unit 6 · Services, Networking and Security
 > Difficulty: Advanced · Prerequisites: M20, M18
 
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+**Status: content complete** — 4 lessons, 4 labs, Mini-Project E,
+quiz + key, 8 challenges, troubleshooting guide. Start at the
+[content index](content/README.md).
 
 ## What this module covers
 
-journald and classic logs; journalctl queries; monitoring with htop/iostat/vmstat; backups vs snapshots and a tested restore.
+journald storage, priorities and the full journalctl query set; the classic
+`/var/log` world (syslog, auth, kernel/dmesg), log levels and rotation with
+logrotate; monitoring with uptime/free/vmstat/iostat/sar under a
+utilization–saturation–errors frame; the six-step incident methodology
+rehearsed on five recurring DS-server incidents (dead service, overnight OOM,
+disk full, CPU storms, silent pipeline failures); and the backup 3-2-1 rule
+with a **test-restored** archive + mirror. Culminates in Mini-Project E:
+`health.sh` + `backup.sh` + an evidence-based incident report.
 
 The full specification — learning objectives, concepts, command-line skills,
 laboratory, exercises, mini-project, and the Data Science connection — lives in
@@ -21,15 +28,9 @@ laboratory, exercises, mini-project, and the Data Science connection — lives i
 - [ ] Lab environment working ([SETUP.md](../../SETUP.md))
 - [ ] `lab-log.md` exists in your home directory
 
-## Definition of done
-
-- [ ] Laboratory completed; outputs recorded in `lab-log.md`
-- [ ] Exercises attempted without looking up every answer
-- [ ] Roadmap self-check questions answered aloud
-- [ ] Mini-project submitted (if defined for this module)
-
 ## Module links
 
+- Content index: [content/README.md](content/README.md) — lessons, labs, mini-project, practice
 - Roadmap: [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md#unit-6--services-networking--security-m20m25)
 - Cheatsheets: [resources/cheatsheets/](../../resources/cheatsheets/)
 - Fixes and questions: open an issue per [CONTRIBUTING.md](../../CONTRIBUTING.md)

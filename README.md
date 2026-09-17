@@ -57,22 +57,28 @@ Linux-Administration-Course/
 ├── README.md                ← you are here
 ├── COURSE-ROADMAP.md        ← full curriculum: units, modules, objectives, DS links
 ├── SETUP.md                 ← environment setup (VM, WSL2, tools)
+├── WEBSITE.md               ← how this repo publishes its website (MkDocs + Pages)
 ├── CONTRIBUTING.md          ← how to contribute content, style, review process
 ├── LICENSE                  ← MIT license
+├── mkdocs.yml               ← website configuration (navigation, theme)
+├── requirements-docs.txt    ← pinned website build dependencies
+├── .github/workflows/
+│   └── publish.yml          ← builds & publishes the website on push to main
+├── scripts/
+│   └── build-site.sh        ← assembles the website sources from repo content
 ├── modules/
 │   ├── M01-what-is-linux/
-│   ├── ...                  ← 30 module folders, M01–M30
-│   └── M30-capstone-project/
+│   ├── ...                  ← 30 module folders, M01–M30 (+ M31 companion)
+│   └── M31-data-science-server/
 ├── projects/
 │   ├── mini-projects/       ← standalone mini-project briefs
-│   └── capstone/            ← capstone brief, rubric, starter files
+│   └── capstone/            ← student pack + instructor pack (rubric, viva)
+├── assessments/             ← quizzes, exams, lab assessments, assignments, viva
+├── labs/                    ← progressive practical labs, Levels 1–5
+├── cheatsheets/             ← 20 one-page command references (by topic)
 ├── datasets/                ← small datasets used in exercises and labs
-├── resources/               ← cheatsheets, glossary, references, reading list
-│   ├── cheatsheets/
-│   ├── glossary.md
-│   └── references.md
-├── assets/                  ← diagrams and figures
-└── scripts/                 ← instructor/demo helper scripts (reviewed before use)
+├── resources/               ← unit cheatsheets, glossary, references, reading list
+└── assets/                  ← diagrams and figures
 ```
 
 ---
@@ -99,6 +105,36 @@ canonical template:
 | Common pitfalls | Mistakes beginners make, and how to avoid them |
 | Self-check | Questions and skills to verify before moving on |
 | Further reading | Official documentation links (Ubuntu, kernel.org, man pages) |
+
+### Reading the material online
+
+The whole course is browsable as a website — units as tabs, every module
+linked to its lessons, labs, quizzes, and cheatsheets, with full-text search:
+
+**https://nadeem-majeedch.github.io/Linux-Administration-Course/**
+
+The site is rebuilt automatically from this repository on every push to
+`main`; the pages you read there are the same Markdown files you see here.
+
+### How to study
+
+1. **Set up your lab first.** Follow [SETUP.md](SETUP.md): an Ubuntu VM is the
+   recommended environment; WSL2 works on Windows. Do this before Module 01.
+2. **Follow the units in order.** The
+   [Course Roadmap](COURSE-ROADMAP.md) defines the sequence M01 → M30 and what
+   each module assumes you already know. Modules build on each other —
+   don't skip ahead.
+3. **Work each module in the same rhythm:** read the lessons, do the labs,
+   attempt the exercises and quiz *before* looking at answers, then check the
+   module's self-check before moving on.
+4. **Keep a lab log** (`lab-log.md`). Record what you ran, what happened, and
+   one thing you'd do differently. The capstone grades evidence of practice.
+5. **Use the safety rails.** Stay in your VM/WSL2 sandbox, take snapshots
+   before risky labs, and never run a command you can't explain.
+6. **Close the loop with the practice tiers:** the [progressive labs](labs/README.md)
+   (Levels 1–5), [mini-projects](projects/mini-projects/README.md),
+   [assessments](assessments/README.md), and finally the
+   [capstone](projects/capstone/README.md).
 
 ### Practical expectations
 
@@ -129,7 +165,7 @@ Instructors can adapt weights; the grading rubric for each component ships with 
 | 01 | [What Is Linux?](modules/M01-what-is-linux/README.md) | 1. Foundations |
 | 02 | [Distributions](modules/M02-linux-distributions/README.md) | 1. Foundations |
 | 03 | [Linux Architecture](modules/M03-linux-architecture/README.md) | 1. Foundations |
-| 04 | [Installing Ubuntu in a VM](modules/M04-installing-ubuntu/README.md) | 1. Foundations |
+| 04 | [Installing Ubuntu in a VM](modules/M04-installing-linux-vms/README.md) | 1. Foundations |
 | 05 | [The Terminal & Shell](modules/M05-terminal-and-shell/README.md) | 2. Command Line |
 | 06 | [Filesystem Hierarchy & Navigation](modules/M06-filesystem-hierarchy/README.md) | 2. Command Line |
 | 07 | [Files, Directories & Text Files](modules/M07-files-and-directories/README.md) | 2. Command Line |
@@ -209,10 +245,50 @@ By the end of this course, a student can independently:
 
 ---
 
+## The Website (MkDocs + GitHub Pages)
+
+The course publishes itself as a static website via [MkDocs](https://www.mkdocs.org/)
+with the Material theme — chosen because the repository's plain Markdown stays
+the single source of truth (files are copied verbatim, so relative links keep
+working), and because the toolchain is two pinned Python packages a TA can
+maintain. Details and rationale: [WEBSITE.md](WEBSITE.md).
+
+### Local preview
+
+```bash
+# from the repository root — no admin rights, nothing outside the repo
+python -m venv .docs-venv
+source .docs-venv/bin/activate        # Windows: .docs-venv\Scripts\activate
+pip install -r requirements-docs.txt
+bash scripts/build-site.sh            # assembles site-src/ from repo content
+mkdocs serve                          # live preview at http://127.0.0.1:8000
+```
+
+A production build (`mkdocs build --strict --clean`) writes `site/` and fails
+on any broken internal link, so problems surface before publication.
+
+### How publication works
+
+- The publication workflow
+  [`.github/workflows/publish.yml`](https://github.com/nadeem-majeedch/Linux-Administration-Course/blob/main/.github/workflows/publish.yml)
+  triggers on
+  every push to `main` (and manual *Run workflow* on the Actions tab).
+- It builds the site in **strict mode** — any broken link fails the build —
+  then deploys the artifact with the official GitHub Pages actions.
+- Required one-time setting: **Settings → Pages → Build and deployment →
+  Source: GitHub Actions**.
+- Live site: <https://nadeem-majeedch.github.io/Linux-Administration-Course/>
+- The workflow runs least-privilege (`contents: read`; only the deploy job has
+  `pages: write`), uses no personal access tokens (OIDC), and pins current
+  major versions of all `actions/*`.
+
+---
+
 ## Documentation
 
 - [COURSE-ROADMAP.md](COURSE-ROADMAP.md) — the full curriculum: objectives, concepts, labs, DS links.
 - [SETUP.md](SETUP.md) — step-by-step environment setup (Windows/macOS/Linux).
+- [WEBSITE.md](WEBSITE.md) — how this repository builds and publishes its website.
 - [CONTRIBUTING.md](CONTRIBUTING.md) — how to contribute exercises, fixes, and new modules.
 - [resources/glossary.md](resources/glossary.md) — plain-language glossary of terms.
 - [resources/references.md](resources/references.md) — official documentation links.

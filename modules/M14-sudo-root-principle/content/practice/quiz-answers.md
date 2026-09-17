@@ -21,7 +21,9 @@ Each answer cites the lesson to revisit.
    the audit trail is the point. (L1 §3, Lab 1 Part B)
 8. **Any command, as any user and any group, from any host** — full
    administrator. (L1 §4)
-9. **`sudo visudo -c`** — parses everything, edits nothing. (L1 §4)
+9. **`sudo visudo -c`** — parses everything, edits nothing: it is a
+   validator, never a writer, so it cannot itself corrupt a policy
+   even on a machine whose sudoers is already broken. (L1 §4)
 10. **Files with `.` or `~` in their names are ignored by the includedir**
     — so renaming `foo` → `foo.bak` (or `foo.old`) disables a rule without
     deleting it. (L1 §4, Lab 1 Part E)

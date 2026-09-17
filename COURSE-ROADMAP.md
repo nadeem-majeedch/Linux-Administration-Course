@@ -351,6 +351,9 @@ where "terminal user" becomes "administrator of their own data workflows."
 
 - **Difficulty:** Intermediate
 - **Prerequisites:** M09 (M08 strongly recommended)
+- **Status:** content complete (2026-09) — 5 lessons, 2 labs (8 fix-the-bug
+  scripts + dq.sh builder), quiz + key, 8 challenges, troubleshooting guide,
+  Mini-Project A. See `modules/M10-bash-scripting/content/`.
 - **Learning objectives**
   - Write and run Bash scripts with a shebang, comments, and readable structure.
   - Use variables, quoting rules, and command substitution correctly.
@@ -367,9 +370,11 @@ where "terminal user" becomes "administrator of their own data workflows."
   permission exposure, formalized in M12).
 - **Command-line skills:** `bash`, `bash -n`, `bash -x`, `chmod +x`, `shellcheck`
   (apt package `shellcheck`), `read`, `test`/`[[`, `printf`, `local`, `shift`, `getopts` (intro).
-- **Laboratory:** build `resize_and_rename.sh` (batches the M07/M08 file ops over globs);
-  build `dq.sh` — wraps the M09 data-quality pipeline in a script taking a file argument,
-  with usage help, argument validation, strict mode, and a log line per step.
+- **Laboratory:** implemented as two labs: *fix-the-bugs* (eight classic broken
+  scripts — quoting, word splitting, exit-code lies, read armor, the guarded-rm
+  lesson, swallowed status — diagnose with bash -x/shellcheck, fix, classify) and
+  *build dq.sh* (five stages: capture pipeline → usage contract → stderr logging
+  with data/stdout split → content validation → shellcheck to zero).
 - **Exercises:** 8 fix-the-bug scripts (classic quoting/exit-code mistakes);
   convert 3 M09 one-liners into parameterized scripts; write tests-as-expectations
   ("given X input, script must produce Y") for one script.
@@ -385,6 +390,10 @@ where "terminal user" becomes "administrator of their own data workflows."
 
 - **Difficulty:** Intermediate
 - **Prerequisites:** M10
+- **Status:** content complete (2026-09) — 3 lessons, 2 labs (harden dq.sh + the
+  final scripting challenge `organize.sh`), quiz + key, 8 challenges,
+  troubleshooting guide, Mini-Project A hardening. See
+  `modules/M11-advanced-shell-automation/content/`.
 - **Learning objectives**
   - Process files line-by-line and stream-by-stream correctly (`while read`, `IFS`).
   - Use traps for cleanup; manage temp files and temp directories safely.
@@ -400,8 +409,12 @@ where "terminal user" becomes "administrator of their own data workflows."
   `getopts` option parsing with help text.
 - **Command-line skills:** `trap`, `mktemp`, `nohup`, `jobs`/`fg`/`bg` (preview of M18),
   `getopts`, `wait`, `rsync` (first look, backup pattern only — depth in M23).
-- **Laboratory:** harden `dq.sh`: add `--dry-run`, `--out`, `-h`, trap-based temp cleanup,
-  timestamped logs to `logs/`; break it mid-run with Ctrl+C and verify cleanup ran.
+- **Laboratory:** implemented as two labs: *harden dq.sh* (getopts interface, run()
+  doorway + dry-run, mktemp + trap cleanup with rc stashing, timestamped logs,
+  interrupt drill proving rc=130 with no debris, idempotent double-run) and the
+  *final scripting challenge* — `organize.sh`, a content-sniffing dataset organizer
+  with dry-run, no-clobber idempotency, graceful death, options, env config, and a
+  self-test suite; the Unit 3 capstone lab.
 - **Exercises:** convert a fragile script into an idempotent one; find and fix three
   quoting bugs; write a dry-run for a rename task over 100 files.
 - **Mini-project:** none (absorbed into Mini-Project A hardening).
@@ -729,6 +742,8 @@ on schedule — the core "keep it running" skills.
 
 - **Difficulty:** Advanced
 - **Prerequisites:** M10, M11, M18
+- **Status:** content complete (2026-09) — 3 lessons, 2 labs, quiz + key, 8
+  challenges, troubleshooting guide. See `modules/M19-scheduling-cron-timers/content/`.
 - **Learning objectives**
   - Explain scheduling use cases and cron vs systemd timer trade-offs.
   - Read and write crontab syntax fluently; use `@reboot`/`@daily` shortcuts.
@@ -746,9 +761,11 @@ on schedule — the core "keep it running" skills.
 - **Command-line skills:** `crontab -e/-l/-r` (with `-r` caution), `systemctl --user`,
   `systemd-analyze calendar` (validate schedules!), `journalctl --user -u <unit>`,
   `systemctl list-timers`.
-- **Laboratory:** schedule the M11-hardened `dq.sh` via user crontab with proper
-  logging; rebuild the same job as a systemd user timer with `Persistent=true`; verify
-  both via logs; deliberately break the script's PATH assumption and diagnose it.
+- **Laboratory:** implemented as two labs: *schedule the pipeline* (M11's hardened
+  dq.sh under the `env -i` gate → cron with the two-minute rule → systemd timer pair
+  with a forced run → verification matrix; disable-what-you-don't-keep) and
+  *cron debugging* — three deliberate patients (PATH poverty, cwd betrayal, silent
+  unlogged failure) diagnosed from logs, mail spool, `env -i` and an env diff.
 - **Exercises:** 10 schedule-translation drills; debug a cron job that "works in my
   terminal but not in cron" (env, paths, relative paths); choose cron vs timer for 4
   scenarios with reasons.
@@ -820,7 +837,9 @@ junior server administrators — the role they'll play around shared GPU machine
 ### M21 — Networking Fundamentals
 
 - **Difficulty:** Advanced
-- **Prerequisites:** M18 (M20 helpful)
+- **Prerequisites:** M18, M20
+- **Status:** content complete (2026-09) — 5 lessons, 2 labs, quiz + key, 8
+  challenges, troubleshooting guide. See `modules/M21-networking-fundamentals/content/`.
 - **Learning objectives**
   - Explain IP addressing (IPv4 focus, IPv6 recognition), subnets, and gateways.
   - Trace DNS resolution; use dig/resolvectl to query records.
@@ -838,9 +857,11 @@ junior server administrators — the role they'll play around shared GPU machine
   recognition), `resolvectl status/query`, `ss -tulpn` (read; sudo for process names),
   `curl` (`-I`, `-v`), `hostname -I`, `traceroute`/`mtr` (intro), `nc` (demo),
   `ip -brief addr`.
-- **Laboratory:** full diagnosis circuit on the VM: break DNS (lab-provided script),
-  fix it stage by stage; map all listening ports and identify each; fetch a page with
-  curl and explain every hop; compare VM NAT vs bridged mode addressing.
+- **Laboratory:** full diagnosis circuit on the VM — implemented as two labs:
+  *Map your own machine* (interfaces, routes, resolvers, sockets; four-command
+  health check) and the *Diagnosis clinic* (three local break-and-fix incidents
+  on services the student starts themselves — DNS/hosts, dead port, bind-scope
+  mismatch). All traffic loopback/own-VM only.
 - **Exercises:** subnet/CIDR arithmetic basics; "why can I ping but not browse?"
   scenarios; dig-output reading; port-to-service matching; curl verb drills.
 - **Mini-project:** none.
@@ -854,6 +875,9 @@ junior server administrators — the role they'll play around shared GPU machine
 
 - **Difficulty:** Advanced
 - **Prerequisites:** M21, M20
+- **Status:** content complete (2026-09) — 4 lessons, 2 labs (key workflow +
+  5-patient SSH diagnosis clinic), quiz + key, 8 challenges, troubleshooting
+  guide, Mini-Project D. See `modules/M22-ssh-remote-admin/content/`.
 - **Learning objectives**
   - Explain SSH transport and authentication (passwords vs key pairs vs agents).
   - Generate, protect, and use Ed25519 keys; deploy public keys properly.
@@ -873,10 +897,13 @@ junior server administrators — the role they'll play around shared GPU machine
   + `ssh-add`, `scp`, `ssh -L/-R/-J`, `ssh-keyscan` (demo), `ssh -v` debugging,
   `tmux` (`new`, `detach`, `attach`, `ls`, scrollback), `exit codes` over ssh, `sshfs`
   (optional awareness).
-- **Laboratory:** full key workflow against the VM (generate → deploy → disable nothing
-  yet, but verify passwordless login); build `~/.ssh/config` with aliases; tunnel the
-  VM's web port to the host; run a remote command pipeline; tmux attach/detach drill;
-  deliberate-failure lab: wrong key permissions, and read the error.
+- **Laboratory:** implemented as two labs: the *key workflow* (generate ed25519 →
+  deploy via ssh-copy-id → agent → ssh-config alias with `ssh -G` verification →
+  passwordless confirmed → host-key rebuild rehearsal with the full
+  `HOST KEY CHANGED` choreography) and the *diagnosis clinic* — five broken-SSH
+  patients (key permissions, wrong-key config, host-key change, config
+  resolution, dead service behind a live tunnel), symptoms only, evidence-first
+  with `ssh -v` / `ls -l ~/.ssh` / `ssh-add -l` / `ssh -G` / auth.log.
 - **Exercises:** key-troubleshooting scenarios (permissions, agent, wrong key); config
   translation tasks (plain command → config block); tunnel design questions;
   fingerprint-mismatch incident walkthrough (what to do, what never to do).
@@ -931,6 +958,19 @@ junior server administrators — the role they'll play around shared GPU machine
 
 - **Difficulty:** Advanced
 - **Prerequisites:** M20, M18
+- **Companion module (2026-09):** the **Performance & Troubleshooting clinic**
+  (`modules/M23-linux-performance-troubleshooting/`, numbered dir, pairs with the
+  Performance Clinic extension above) — the eight-step methodology, twelve
+  drill cards (server-slow, disk-full, memory, CPU, hangs, services, DNS,
+  connectivity, permissions, Python env, package installs, Jupyter), the
+  four-incident **Drill Book**, quiz + key, 8 challenges. Method-graded; all
+  breakage staged by the student on their own VM.
+- **Status:** content complete (2026-09) — 5 lessons, 4 labs, Mini-Project E,
+  quiz + key, 8 challenges, troubleshooting guide, **plus the Performance
+  Clinic extension** (4 resource-stream lessons — CPU/load-average decoding,
+  memory/swap/OOM-sequence, disk-iostat/await/network counters — a
+  diagnose-first load clinic with truth notes, 20-Q quiz + key, 8 challenges).
+  See `modules/M24-logs-journald-monitoring/content/`.
 - **Learning objectives**
   - Explain logging sources: journald (binary, structured) vs classic text logs.
   - Query the journal by unit, time, priority, and pattern.
@@ -954,11 +994,15 @@ junior server administrators — the role they'll play around shared GPU machine
   logs, `grep` over `/var/log` (read; sudo where needed), `logrotate` config reading,
   `htop`, `iostat` (sysstat), `vmstat`, `sar` (intro), `df`/`du` recap, `rsync`-based
   backup script, `tar` (`-czf`, `-xzf`, `-tzf`) for archives, `sha256sum` for verify.
-- **Laboratory:** incident walkthroughs (three prepared broken-service scenarios:
-  solve from journal evidence); live-tail lab (generate log lines, watch with -f);
-  monitoring circuit under load (M18's stress script + iostat/vmstat readings,
-  interpreted in the lab log); backup lab: tar snapshot + rsync mirror to a second
-  virtual disk (from M17), then a full test-restore to a scratch directory.
+- **Laboratory:** implemented as four labs: *log forensics* (two prepared
+  incidents — broken user service, capped-memory OOM — solved purely from
+  journal evidence), *live-tail circuit* (journalctl -f with tag/priority
+  filters, a greppable Python logger via systemd-cat, tail -f on a file),
+  *monitoring under load* (lab-provided niced CPU + I/O burn scripts read
+  through vmstat, iostat -x and a captured sar history, against a recorded
+  baseline), and *backup + test-restore* (tar archive + sha256, rsync mirror
+  to a second loopback virtual disk from M17, deliberate corruption, full
+  restore verified with diff).
 - **Exercises:** journal query drills (find all ERRORs from a unit since boot);
   log-triage puzzles (given log excerpts, name the failure); monitoring-reading
   interpretation; design a retention policy for a fictional service.
@@ -978,6 +1022,9 @@ junior server administrators — the role they'll play around shared GPU machine
 
 - **Difficulty:** Advanced
 - **Prerequisites:** M21, M22, M24
+- **Status:** content complete (2026-09) — 6 lessons, 2 labs (hardening lab
+  + secrets audit), quiz + key, 8 challenges, troubleshooting guide, and the
+  server hardening checklist artifact. See `modules/M25-security-firewall/content/`.
 - **Learning objectives**
   - Apply a security checklist to a Linux host: updates, users, services, firewall, logging.
   - Explain firewall models; use ufw to allow/deny specific services and ports.
@@ -998,10 +1045,14 @@ junior server administrators — the role they'll play around shared GPU machine
   `enable`, app profiles), `ss -tulpn` audit (recap), `sudo sshd -t` (config test),
   sshd_config editing with backup + rollback, `apt update && apt upgrade` discipline,
   `unattended-upgrades` check, `gpg --verify` (demo), `sha256sum` verification (recap).
-- **Laboratory:** the **hardening lab**: snapshot → baseline audit (`ss`, users, updates)
-  → ufw default-deny with explicit SSH allow → sshd key-only + no-root (tested from a
-  *second* terminal before closing the first!) → service audit → post-hardening audit
-  → all steps logged in `hardening.md` with before/after evidence and a rollback plan.
+- **Laboratory:** implemented as two labs: the *hardening lab* — snapshot → baseline
+  audit → patch debt → ufw default-deny with source-scoped SSH → sshd
+  key-only/no-root/AllowGroups via a `99-` drop-in (precedence trap included),
+  verification trio from a second terminal, service audit, both rollback layers
+  rehearsed — and the *secrets audit*: a seeded (fabricated) repo audited with
+  grep + git history, findings classified, the rotate-and-recover playbook
+  rehearsed, the env-pattern fix implemented and verified. The hardening
+  checklist doubles as the lab rubric.
 - **Exercises:** firewall rule design for 5 service scenarios (SSH from campus subnet
   only; web public; database loopback-only); risk-analysis short answers; spot-the-
   vulnerability configs; secret-hygiene audit of a provided (fake) repo.
@@ -1024,6 +1075,11 @@ environments, Jupyter, containers, servers, databases — and deploy a real serv
 ### M26 — Git & Development Workflows
 
 - **Difficulty:** Intermediate
+- **Status:** content complete (2026-09) — 3 lessons (model/core loop, branching
+  & merging, remotes/.gitignore/SSH auth/workflows), 3 labs (version-your-work,
+  break/repair clinic with five patients, **end-to-end DS workflow capstone**:
+  SSH→Git→venv→data→Jupyter→analysis→output→Git), quiz + key, 8 challenges,
+  troubleshooting guide. See `modules/M26-git-dev-workflows/content/`.
 - **Prerequisites:** M07, M15 (M10 helpful)
 - **Learning objectives**
   - Explain version control concepts: repository, commit, history, remotes.
@@ -1059,7 +1115,11 @@ environments, Jupyter, containers, servers, databases — and deploy a real serv
 ### M27 — Python, Jupyter & Data Workloads
 
 - **Difficulty:** Intermediate
-- **Prerequisites:** M16, M15, M10 (Python basics helpful, taught as needed)
+- **Status:** content complete (2026-09) — 4 lessons, 3 labs (build-freeze-recreate
+  environments · remote Jupyter via tunnel · cron-scheduled batch with `env -i`
+  rehearsal), quiz + key, 8 challenges, troubleshooting guide. See
+  `modules/M27-python-jupyter-data/content/`.
+- **Prerequisites:** M16, M15, M10 (Python basics helpful, taught as needed; M19 for Lab 3)
 - **Learning objectives**
   - Manage Python versions and environments on Linux the right way:
     `python3 -m venv`, pip, and requirements pinning.
@@ -1109,6 +1169,13 @@ environments, Jupyter, containers, servers, databases — and deploy a real serv
 ### M28 — Docker & Containers
 
 - **Difficulty:** Intermediate → Advanced
+- **Status:** content complete (2026-09) — 5 lessons (fundamentals/VMs-vs-containers,
+  CLI+lifecycle, Dockerfiles+caching, volumes/networks/limits, Compose+security+
+  ten mistakes), 4 labs (official-repo install + docker-group least-privilege,
+  first containers with loopback-proof, build/persist/debug with M27 env as image,
+  Jupyter container + Compose API+Postgres stack with healthchecks and
+  down/-v persistence proof), quiz + key, 8 challenges, troubleshooting guide.
+  See `modules/M28-docker-containers/content/`.
 - **Prerequisites:** M16, M20, M27 (M26 recommended)
 - **Learning objectives**
   - Explain containers vs VMs vs the host kernel; images, layers, registries.
@@ -1153,6 +1220,17 @@ environments, Jupyter, containers, servers, databases — and deploy a real serv
 
 - **Difficulty:** Advanced
 - **Prerequisites:** M20, M21, M25, M27 (M28 recommended)
+- **Status:** content complete (2026-09) — 4 lessons, 2 labs, quiz + key, 8
+  challenges, troubleshooting guide, **plus three advanced extensions**
+  (content/extensions/): **A Server Administration** (lifecycle/provisioning,
+  fleet consistency & drift, runbooks/operations calendar, Ansible conceptually;
+  provision-the-second-server lab with convergence proof), **B Cloud Linux**
+  (provider-neutral model: instance lifecycle & billing states, block-vs-object
+  storage, VPC/security groups, cloud-init with a **local NoCloud lab** —
+  QEMU/LXC seed, no accounts/spend/keys), **C DevOps** (Git-as-truth, CI/CD
+  concepts with a real GitHub Actions workflow run in a local `act`-class
+  container runner, Terraform conceptually, blue-green on one VM). Each
+  extension: index + lessons + lab + quiz/challenges.
 - **Learning objectives**
   - Explain how a web request reaches a service: DNS → port → reverse proxy → app.
   - Install, configure, and verify nginx as a reverse proxy (VM scope).
@@ -1181,11 +1259,13 @@ environments, Jupyter, containers, servers, databases — and deploy a real serv
   `sudo -u postgres psql`, `CREATE ROLE/DATABASE`, `GRANT`, `psql` essentials,
   `\copy` CSV loading, `pg_dump`/`pg_restore`, `ss -tulpn` to verify bindings,
   `ufw` rules for the new service (recap M25), `journalctl -u` for app logs.
-- **Laboratory:** the **deployment lab**: serve a static dashboard page via nginx;
-  deploy a provided FastAPI app as a user systemd service with an env file;
-  proxy `/api/` to it; load `datasets/sales-2019-q1.csv` into Postgres; make the
-  API query it; verify every hop with curl; write `runbook.md` (start, stop,
-  check health, read logs, restore DB from dump, rollback config).
+- **Laboratory:** implemented as two labs: *nginx + Postgres* (server block with
+  Host-header routing proofs, the 403 permission clinic via error.log + namei, CSV
+  into Postgres with `\copy`, `pg_dump` → scratch restore with timed RTO) and the
+  *deployment lab* — FastAPI as a user unit with `EnvironmentFile` + `Restart=`,
+  resilience/502/DB-failure drills, `pg_stat_activity` closing the request path,
+  and the six-section `runbook.md` (start/stop, health, logs, restore, rollback,
+  limits).
 - **Exercises:** request-path tracing (browser → … → app) for 3 architectures;
   nginx location-block reading; SQL essentials drills; "API returns 502"
   diagnosis from logs; config-change-with-rollback rehearsal.
@@ -1243,6 +1323,41 @@ data-science system — the course's proof of competence.
 - **Notes:** grading emphasizes *operational evidence* (logs, runbooks,
   restore tests) over model accuracy; a simple, reliable, monitored pipeline
   outscores a fancy broken one — deliberately.
+- **Status:** content complete (2026-09) — full project pack in
+  `projects/capstone/`, split into **student pack** (`student/SPEC.md`: theme
+  "Deploy and Administer a Linux-Based Data Science Server", 9 learning
+  outcomes, reference architecture, 18 required tasks with module mappings,
+  5 milestones + week-by-week instructions, deliverables checklist,
+  security/troubleshooting/documentation requirements, **three environment
+  tracks** — Ubuntu VM primary, WSL2 supported, Docker all-in-one; cloud/GPU
+  optional and uncredited; 5 extension challenges E1–E5; `student/STARTER.md`:
+  repo layout + first-week checklist + per-track setup) and **instructor pack**
+  (`instructor/RUBRIC.md`: 100-point evidence rubric, phase weighting,
+  non-negotiables, demo protocol, integrity notes; `instructor/VIVA.md`: 29-
+  question oral exam bank organized by outcome with grading notes;
+  `instructor/INCIDENTS.md`: 7 injectable incidents I1–I7 with staging
+  scripts, symptom-only briefs, full answer keys, and an incident-report
+  grading slice).
+
+### M31 (companion) — The Data Science Server
+
+- **Difficulty:** Advanced · **Prerequisites:** M20, M22, M24-clinics, M26–M29
+- **Status:** content complete (2026-09) — the capstone companion module
+  (`modules/M31-data-science-server/`, paired with M30 like the M23-clinic):
+  3 consolidation lessons (server anatomy: directory contract, venv/pip/conda
+  concepts, GPU/CUDA at the administrative level with `nvidia-smi` literacy and
+  CPU-only twins; running work: tmux/tee survival, pre-flight checklist, Jupyter
+  server/kernel management, the monitoring circuit, mechanized etiquette; data &
+  reproducibility: the `/data` commons with checksum provenance, run directories
+  stamped by the launcher, the six-link reproducibility chain), the **13-scenario
+  narrative walkthrough** (access → SSH → project → env → deps → clone → dataset →
+  Jupyter → experiment → monitor → results → backup → cleanup), the **Data Science
+  Linux Server Administration Lab** (two-actor VM stage with a colleague account;
+  six phases incl. shared-permission proofs, kill-and-resume checkpoint drill,
+  restore-verified backup, cleanup census; CPU-only, no GPU/cloud/spend), 22-Q
+  quiz + key, 6 challenges (conda translation, etiquette monitor, run-tree
+  archaeology, kill-and-resume, user-side disk incident, cross-student
+  reproducibility audit). All breakage/resources are the student's own.
 
 ---
 

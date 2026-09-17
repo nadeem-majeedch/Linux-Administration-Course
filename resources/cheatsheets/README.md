@@ -3,6 +3,10 @@
 One printable page per unit, plus two special cards. Print them, tape them to the
 monitor edge, and retire them one by one as commands move into muscle memory.
 
+> For **per-topic** command references (20 sheets: processes, storage, docker,
+> troubleshooting, …) see the course-level [`cheatsheets/`](../../cheatsheets/README.md)
+> directory — these unit cards stay broader and lighter.
+
 | Sheet | Covers | Modules |
 |---|---|---|
 | [unit1-foundations.md](unit1-foundations.md) | System identification, distro families, architecture layers, VMs | M01–M04 |

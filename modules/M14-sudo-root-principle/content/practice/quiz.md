@@ -15,8 +15,10 @@ Answer in `lab-log.md`; key: [quiz-answers.md](quiz-answers.md).
    and why does that matter on a shared server?
 8. **P** Your `sudo -l` shows `(ALL : ALL) ALL`. What, precisely, may you
    run as whom?
-9. **R** Command to check the *whole* sudoers policy for syntax errors
-   without editing anything?
+9. **R** A teammate's drop-in was edited with `nano` directly and you
+   suspect a typo. What is the check-only command that parses the
+   *entire* policy without editing anything — and what does it refuse
+   to do that makes it safe to run at any time?
 10. **U** Why must a sudoers drop-in filename avoid `.` and `~`, and what
     useful behavior does that rule give you for free?
 11. **P** Write a drop-in: members of `sync` may run

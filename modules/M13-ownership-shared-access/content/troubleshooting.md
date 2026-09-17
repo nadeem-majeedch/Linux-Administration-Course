@@ -11,7 +11,7 @@ Format: symptom → likely cause → check → fix → prevention. Practice in
 - **Check:** `ls -ld /tmp/scratch`
 - **Fix:** `sudo chmod +t /tmp/scratch`
 - **Prevention:** Every shared writable directory gets `1` in front of its
-  mode (see [Lesson 2](lessons/02-acls-permission-clinic.md#6-sticky-bit-shared-but-safe)).
+  mode (see [Lesson 1, the sticky bit](lessons/01-ownership-chown-shared-dirs.md#6-the-sticky-bit-shared-but-safe)).
 
 ## 2. New files aren't shared with the group
 
@@ -60,7 +60,7 @@ Format: symptom → likely cause → check → fix → prevention. Practice in
 - **Fix:** `sudo chown ...` — or `chgrp` instead (owners may give files to a
   group they belong to — no sudo needed).
 - **Prevention:** Know which operation is an ownership change vs a group
-  change ([Lesson 1](lessons/01-ownership-chown-shared-dirs.md#2-chown-chgrp-moving-ownership)).
+  change ([Lesson 1, chown & chgrp](lessons/01-ownership-chown-shared-dirs.md#2-chown--chgrp-moving-ownership)).
 
 ## 6. ACLs exist but group members still can't write
 

@@ -16,7 +16,11 @@ Answer in `lab-log.md`; key: [quiz-answers.md](quiz-answers.md).
 7. **U** In the check-first workflow, what does the summary line's
    "The following packages will be REMOVED" signal, and what's the
    required response?
-8. **R** Command to preview an install without changing anything?
+8. **R** Before installing a library on a **production** server, your
+   team rule is: preview every change to the package set first. Name
+   the apt mode that resolves and reports without touching the
+   system — and the one line of its output you must read before
+   saying yes.
 9. **U** Name the four Ubuntu components and their support character.
 10. **DS** Why can `universe` matter for a data science VM specifically?
 11. **R** What does apt verify before trusting a repository's index —

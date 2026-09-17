@@ -3,13 +3,17 @@
 > Unit 5 · Software, Storage and Time
 > Difficulty: Advanced · Prerequisites: M10, M11, M18
 
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+**Status: content complete** — 3 lessons, 2 labs, quiz + key, 8 challenges,
+troubleshooting guide. Start at the [content index](content/README.md).
 
 ## What this module covers
 
-Cron and systemd timers; crontab syntax, logging, and validation; schedule a real data pipeline that proves it ran.
+Cron fundamentals and five-field fluency with `systemd-analyze calendar`
+validation; the cron environment trap (PATH, cwd, tty) and the env-proof script;
+logging scheduled jobs (redirect layers, quiet-success, the mail spool);
+systemd timer+service pairs with `Persistent=true`; the production pattern —
+locks, fail-loudly, idempotency; and the verify-it-ran discipline: scheduling
+the M11-hardened pipeline both ways, with logs as proof.
 
 The full specification — learning objectives, concepts, command-line skills,
 laboratory, exercises, mini-project, and the Data Science connection — lives in
@@ -21,14 +25,9 @@ laboratory, exercises, mini-project, and the Data Science connection — lives i
 - [ ] Lab environment working ([SETUP.md](../../SETUP.md))
 - [ ] `lab-log.md` exists in your home directory
 
-## Definition of done
-
-- [ ] Laboratory completed; outputs recorded in `lab-log.md`
-- [ ] Exercises attempted without looking up every answer
-- [ ] Roadmap self-check questions answered aloud
-- [ ] Mini-project submitted (if defined for this module)
-
 ## Module links
+
+- Content index: [content/README.md](content/README.md) — lessons, labs, practice
 
 - Roadmap: [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md#unit-5--software-storage--time-m16m19)
 - Cheatsheets: [resources/cheatsheets/](../../resources/cheatsheets/)

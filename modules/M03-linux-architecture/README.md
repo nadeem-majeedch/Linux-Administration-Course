@@ -1,35 +1,53 @@
 # M03 — Linux Architecture
 
-> Unit 1 · Foundations of Linux
-> Difficulty: Beginner · Prerequisites: M01, M02
+> Unit 1 · Foundations of Linux · Difficulty: Beginner → Intermediate
+> Prerequisites: [M01](../M01-what-is-linux/README.md),
+> [M02](../M02-linux-distributions/README.md)
+> Est. time: ~5 h (lessons ~100 min, labs ~65 min, practice ~100 min)
 
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+**Status: content complete.**
 
-## What this module covers
+## Learning objectives
 
-The layers from hardware to shell; what the kernel manages; everything-is-a-file; first /proc and /sys exploration.
+By the end of this module you can:
 
-The full specification — learning objectives, concepts, command-line skills,
-laboratory, exercises, mini-project, and the Data Science connection — lives in
-[COURSE-ROADMAP.md](../../COURSE-ROADMAP.md), Unit 1.
+1. **Draw and annotate** the seven layers of the Linux stack, and
+   locate any problem or command on that map.
+2. **Explain** the kernel-space/user-space boundary: syscalls, libc's
+   role, why it is a security boundary, and the crash/isolation
+   asymmetry between the two sides.
+3. **Trace** the four acts of boot (firmware → bootloader →
+   kernel+initramfs → init), read a boot's evidence with
+   `systemd-analyze` and `journalctl -b`, and perform a safe one-boot
+   GRUB intervention.
+4. **Identify** the user-space actors behind a typed command — shell,
+   PATH resolution, dynamic loader, shared libraries — and the
+   evidence command for each.
+5. **Connect** each of the above to the course's later modules
+   (processes, systemd, containers, environments) as locations on one
+   map.
 
-## Before you start
+## What's inside
 
-- [ ] Prerequisites complete: M01, M02
-- [ ] Lab environment working ([SETUP.md](../../SETUP.md))
-- [ ] `lab-log.md` exists in your home directory
+| Path | Contents |
+|------|----------|
+| [content/README.md](content/README.md) | Module guide + prerequisite map |
+| [content/lessons/](content/lessons/) | 4 lessons: layer cake · kernel/user space · boot to shell · user-space anatomy |
+| [content/labs/](content/labs/) | 2 labs: anatomy tour (evidence sheet) · GRUB intervention |
+| [content/practice/](content/practice/) | Quiz (+ key) · challenges C1–C6 |
+| [content/troubleshooting.md](content/troubleshooting.md) | Six architecture-level symptom patterns |
 
 ## Definition of done
 
-- [ ] Laboratory completed; outputs recorded in `lab-log.md`
-- [ ] Exercises attempted without looking up every answer
-- [ ] Roadmap self-check questions answered aloud
-- [ ] Mini-project submitted (if defined for this module)
+- [ ] Anatomy tour report with per-layer evidence lines
+- [ ] One-boot GRUB override performed and reverted, evidence logged
+- [ ] Quiz ≥ 16/20; C2 (the evidence diagram) completed
+- [ ] You can say *which layer* — and name the one evidence command —
+      for: command not found · missing `.so` · `D`-state process ·
+      wrong Python
 
 ## Module links
 
 - Roadmap: [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md#unit-1--foundations-of-linux-m01m04)
-- Cheatsheets: [resources/cheatsheets/](../../resources/cheatsheets/)
-- Fixes and questions: open an issue per [CONTRIBUTING.md](../../CONTRIBUTING.md)
+- Next: [M04](../M04-installing-linux-vms/README.md) ·
+  Cheatsheets: [resources/cheatsheets/](../../resources/cheatsheets/)

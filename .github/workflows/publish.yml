@@ -1,0 +1,86 @@
+name: Publish course website
+
+# Builds the MkDocs site and publishes it to GitHub Pages.
+# Tooling rationale: WEBSITE.md. Local preview instructions: README.md.
+#
+# One-time repository settings (Settings → Pages → Build and deployment →
+# Source: "GitHub Actions"). Until that is set, the deploy step will fail
+# with a clear message rather than publishing somewhere unexpected.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+# Least privilege: read the repository, and (deploy job only) write the
+# Pages deployment. No access to code, issues, or pull requests.
+permissions:
+  contents: read
+
+# Avoid overlapping deployments when several pushes land in quick succession.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build MkDocs site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-docs.txt
+
+      - name: Install pinned documentation toolchain
+        # Exact-version pins (mkdocs==1.6.1, mkdocs-material==9.7.7), reviewed in PRs
+        run: pip install -r requirements-docs.txt
+
+      - name: Generate site sources (scripts/build-site.sh)
+        run: |
+          bash scripts/build-site.sh
+          test -f site-src/index.md
+          test -f site-src/COURSE-ROADMAP.md
+          test -f site-src/modules/M01-what-is-linux/index.md
+
+      - name: Build site (strict mode — warnings fail the build)
+        run: mkdocs build --strict --clean
+
+      - name: Sanity-check published output
+        run: |
+          test -f site/index.html
+          test -f site/COURSE-ROADMAP/index.html
+          test -f site/modules/M01-what-is-linux/index.html
+          test -f site/modules/M10-bash-scripting/content/labs/lab-01-fix-the-bugs/index.html
+          ! grep -rn 'href="http://localhost' site/ --include='*.html'
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write      # the only elevated permission in the workflow
+      id-token: write   # OIDC: how the deploy job authenticates to Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

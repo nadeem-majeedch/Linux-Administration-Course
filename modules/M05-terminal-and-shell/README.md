@@ -5,7 +5,7 @@
 
 **Status: partial content.** The aliases-and-history treatment is complete:
 [Lesson 5](content/lessons/05-aliases-and-history.md) + [Lab 3](content/labs/lab-03-personalize-your-shell.md)
-+ [practice quiz](content/practice/quiz-aliases-history.md). First-contact material
++ [practice quiz](content/practice/quiz-aliases-history.md), [challenges](content/practice/challenges.md), and a [troubleshooting card](content/troubleshooting.md). First-contact material
 (terminal vs shell, prompt, man pages, command syntax) lives in
 [M01/content Lessons 5–7](../M01-what-is-linux/content/README.md); this module's
 remaining original content (shell types, startup files, job control basics, PATH

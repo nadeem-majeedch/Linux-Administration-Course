@@ -89,6 +89,8 @@ student_id,name,email,program,year,gpa,credits
 u001,Amara Okafor,amara.okafor@uni.edu,CS,3,3.46,90
 u002,Boris Ivanov,boris.i@uni.edu,DS,2,3.21,60
 ```
+
+```console
 $ tail -3 server.log                   # last 3 lines — the most recent events
 $ head -1 transactions.csv             # THE ritual: is there a header? what columns?
 ```

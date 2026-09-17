@@ -1,35 +1,49 @@
 # M02 — Linux Distributions
 
-> Unit 1 · Foundations of Linux
-> Difficulty: Beginner · Prerequisites: M01
+> Unit 1 · Foundations of Linux · Difficulty: Beginner
+> Prerequisites: [M01](../M01-what-is-linux/README.md)
+> Est. time: ~4 h (lessons ~90 min, labs ~60 min, practice ~90 min)
 
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+**Status: content complete.**
 
-## What this module covers
+## Learning objectives
 
-Distribution families, package ecosystems, and LTS release policy; identify any system's distro and support window; verify ISO checksums.
+By the end of this module you can:
 
-The full specification — learning objectives, concepts, command-line skills,
-laboratory, exercises, mini-project, and the Data Science connection — lives in
-[COURSE-ROADMAP.md](../../COURSE-ROADMAP.md), Unit 1.
+1. **Explain** the kernel-vs-distribution distinction and name the four
+   components a distribution adds beyond the kernel.
+2. **Differentiate** the major distro families (Debian, Red Hat, Arch,
+   SUSE, Alpine, Arch-derived) by package manager, libc, and release
+   model — and say why the differences matter operationally.
+3. **Identify** any machine's distribution, version, family, and
+   architecture from on-disk evidence (`/etc/os-release`, `uname`,
+   `command -v`), without trusting hostnames.
+4. **Reason** about release models (point vs rolling; LTS support
+   windows) as *operational risk* for shared servers and reproducible
+   pipelines.
+5. **Verify** a downloaded artifact's integrity (SHA-256) and
+   authenticity (GPG signature over a manifest), and explain what each
+   step does and does not prove.
 
-## Before you start
+## What's inside
 
-- [ ] Prerequisites complete: M01
-- [ ] Lab environment working ([SETUP.md](../../SETUP.md))
-- [ ] `lab-log.md` exists in your home directory
+| Path | Contents |
+|------|----------|
+| [content/README.md](content/README.md) | Module guide + objectives + prerequisite links |
+| [content/lessons/](content/lessons/) | 3 lessons: what a distribution is · identify your distro · checksums & signatures |
+| [content/labs/](content/labs/) | 2 labs: identification circuit · verify a download |
+| [content/practice/](content/practice/) | Quiz (+ key) · challenge exercises C1–C5 |
+| [content/practice/challenges.md](content/practice/challenges.md) | Symptom → cause → fix challenges (C4–C5) |
 
 ## Definition of done
 
-- [ ] Laboratory completed; outputs recorded in `lab-log.md`
-- [ ] Exercises attempted without looking up every answer
-- [ ] Roadmap self-check questions answered aloud
-- [ ] Mini-project submitted (if defined for this module)
+- [ ] Both labs completed with recorded evidence
+- [ ] Quiz score ≥ 16/20; challenges C1–C3 attempted
+- [ ] You can state any machine's identity in one sentence — and say
+      which command proved each clause
 
 ## Module links
 
 - Roadmap: [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md#unit-1--foundations-of-linux-m01m04)
-- Cheatsheets: [resources/cheatsheets/](../../resources/cheatsheets/)
-- Fixes and questions: open an issue per [CONTRIBUTING.md](../../CONTRIBUTING.md)
+- Next: [M03](../M03-linux-architecture/README.md) · Cheatsheets:
+  [resources/cheatsheets/](../../resources/cheatsheets/)

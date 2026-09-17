@@ -19,7 +19,10 @@ Each answer cites the lesson to revisit.
    `/home` alone — user data is never package-owned. (L1 §3)
 7. A dependency conflict wants to *remove* installed software; stop and
    read — never accept blind. (L1 §4)
-8. `apt install --dry-run pkg`. (L1 §4, Lab 1 Part D)
+8. **`apt install --dry-run pkg`** (or `-s`) — resolves and reports
+   without touching the system. The line to read: "The following
+   packages will be **REMOVED**" (and the upgrade count) — a silent
+   cascade removal is exactly what the preview exists to catch. (L1 §4, Lab 1 Part D)
 9. main (Canonical-supported, free), restricted (supported, proprietary),
    universe (community, free), multiverse (license-restricted). (L2 §1)
 10. Much of the science stack (and its languages) lives in universe —

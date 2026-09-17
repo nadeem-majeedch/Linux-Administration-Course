@@ -3,13 +3,21 @@
 > Unit 6 · Services, Networking and Security
 > Difficulty: Advanced · Prerequisites: M21, M22, M24
 
-**Status: scaffolded.** Detailed lesson content for this module is authored in the
-content phase (see [CONTRIBUTING.md](../../CONTRIBUTING.md)). This file is the
-module's contract: scope, placement, and completion criteria.
+**Status: content complete** — 6 lessons, 2 labs (the hardening lab + the
+secrets audit), quiz + key, 8 challenges, troubleshooting guide, and the
+**server hardening checklist**. Start at the [content index](content/README.md).
 
 ## What this module covers
 
-Firewall with ufw; SSH hardening with rollback; service audits and secret hygiene; the hardening checklist lab.
+Security principles (least privilege, authN vs authZ, attack surface, defense in
+depth); firewalls from the netfilter model to ufw fluency (default-deny,
+source-scoped rules, app profiles, `limit`; firewalld recognized for RHEL);
+sshd hardening *applied* with the two-terminal rule and rehearsed rollback;
+service audits and patch management (unattended-upgrades, GPG/checksums,
+supply-chain hygiene); secrets management (env vars, .env discipline, leak
+response playbook); and the monitoring layers — auditd, AppArmor vs SELinux,
+fail2ban, malware concepts, backups as recovery — all consolidated in a
+printable hardening checklist.
 
 The full specification — learning objectives, concepts, command-line skills,
 laboratory, exercises, mini-project, and the Data Science connection — lives in
@@ -21,14 +29,9 @@ laboratory, exercises, mini-project, and the Data Science connection — lives i
 - [ ] Lab environment working ([SETUP.md](../../SETUP.md))
 - [ ] `lab-log.md` exists in your home directory
 
-## Definition of done
-
-- [ ] Laboratory completed; outputs recorded in `lab-log.md`
-- [ ] Exercises attempted without looking up every answer
-- [ ] Roadmap self-check questions answered aloud
-- [ ] Mini-project submitted (if defined for this module)
-
 ## Module links
+
+- Content index: [content/README.md](content/README.md) — lessons, labs, checklist, practice
 
 - Roadmap: [COURSE-ROADMAP.md](../../COURSE-ROADMAP.md#unit-6--services-networking--security-m20m25)
 - Cheatsheets: [resources/cheatsheets/](../../resources/cheatsheets/)
