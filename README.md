@@ -299,6 +299,12 @@ on any broken internal link, so problems surface before publication.
 - [resources/cheatsheets/](resources/cheatsheets/) — printable one-pagers per unit.
 - [accreditation/](accreditation/) — proposed CLOs, CLO×assessment alignment
   matrix, module×CLO mapping, and the course one-pager for curriculum review.
+- [teaching/](teaching/README.md) — **complete teaching package**: 16-week teaching
+  plan (32 × 90-min sessions), unit slide decks with speaker notes, instructor
+  manual, lab workbook, 10 in-class demonstrations, assessment framework
+  (quiz bank v2, assignments A4–A6), student revision room, and environment
+  setup/delivery guides. Instructor-only keys are excluded from site
+  navigation — see [teaching/instructor-resources/INSTRUCTOR-ONLY.md](teaching/instructor-resources/INSTRUCTOR-ONLY.md).
 - [LICENSE](LICENSE) — MIT.
 
 ---

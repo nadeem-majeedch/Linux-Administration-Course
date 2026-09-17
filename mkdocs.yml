@@ -172,6 +172,20 @@ nav:
       - Glossary: resources/glossary.md
       - References: resources/references.md
       - Datasets: datasets/README.md
+  - Teaching Package:
+      - Overview: teaching/README.md
+      - 16-Week Teaching Plan: teaching/teaching-plan/16-week-course-plan.md
+      - Weekly Outcomes: teaching/teaching-plan/weekly-learning-outcomes.md
+      - Lecture↔Module Map: teaching/teaching-plan/lecture-to-module-mapping.md
+      - Assessment Schedule: teaching/teaching-plan/assessment-schedule.md
+      - Lecture Slides: teaching/lecture-slides/README.md
+      - Speaker Notes: teaching/speaker-notes/README.md
+      - Instructor Manual: teaching/instructor-manual/README.md
+      - Lab Workbook: teaching/lab-workbook/README.md
+      - Demonstrations: teaching/demonstrations/demo-index.md
+      - Assessment Framework: teaching/assessments/README.md
+      - Revision Room: teaching/revision/README.md
+      - Setup & Delivery: teaching/setup-and-delivery/README.md
   - About:
       - About This Website: site.md
       - Accreditation & CLOs: accreditation/ACCREDITATION-ONE-PAGER.md
