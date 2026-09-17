@@ -44,11 +44,16 @@ jobs:
         run: pip install -r requirements-docs.txt
 
       - name: Generate site sources (scripts/build-site.sh)
+        # build-site.sh uses MkDocs' native README-as-index (no generated
+        # index.md files); assert the actual design. A bare `test` would fail
+        # as an anonymous "exit code 1", so each miss prints a readable error.
         run: |
           bash scripts/build-site.sh
-          test -f site-src/index.md
-          test -f site-src/COURSE-ROADMAP.md
-          test -f site-src/modules/M01-what-is-linux/index.md
+          for f in site-src/README.md \
+                   site-src/COURSE-ROADMAP.md \
+                   site-src/modules/M01-what-is-linux/README.md; do
+            test -f "$f" || { echo "::error::build-site.sh did not produce $f"; exit 1; }
+          done
 
       - name: Build site (strict mode — warnings fail the build)
         run: mkdocs build --strict --clean
